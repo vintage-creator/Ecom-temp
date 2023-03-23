@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { IoMdCloseCircle } from "react-icons/io";
+import { FiMinimize2 } from "react-icons/fi";
 import myGlobalContext from "../context";
 import { v4 as uuidv4 } from "uuid";
 import "./Spinner.css";
@@ -57,7 +57,7 @@ function AddBlogPostTab() {
           className=" rounded-full absolute right-4 top-4 cursor-pointer"
           onClick={() => setOpenAndClose("hidden")}
         >
-          <IoMdCloseCircle color="#eb3535" size={30} />
+           <FiMinimize2 size={24} className="text-[#10181f]"/> 
         </div>
 
         <div className="mt-4">

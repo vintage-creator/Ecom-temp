@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import StoreComponent from "../components/StoreComponent";
 import CartComponent from "../components/CartComponent";
+import PaymentModal from "../components/PaymentModal";
+import PaymentUserDetailsForm from "../components/PaymentUserDetailsForm";
+import myGlobalContext from "../context";
 const Store = () => {
-
+const {cartOpen, paymentOpen} = useContext(myGlobalContext)
   return (
     <div className="relative">
       <div className="absolute z-10 top-[250px] md:top-[150px] left-8 w-[70vw] md:w-[60vw]">
@@ -28,8 +31,9 @@ const Store = () => {
       >
         <div className="w-full h-[700px] md:h-[600px] bg-[rgba(0,0,0,0.4)]"></div>
       </div>
-      <CartComponent/>
-    <StoreComponent />
+      { paymentOpen &&<PaymentModal><PaymentUserDetailsForm /></PaymentModal>}
+      { cartOpen &&<CartComponent/>}
+   <StoreComponent />
     </div>
   );
 };

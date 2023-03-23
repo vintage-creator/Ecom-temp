@@ -2,14 +2,14 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineClose } from "react-icons/md";
 import { BiHomeSmile, BiCloudUpload, BiStore, BiCartAlt } from "react-icons/bi";
+import { RiDashboard2Line } from "react-icons/ri";
 import { CgMenuLeft } from "react-icons/cg";
-import { RiQuestionnaireLine } from "react-icons/ri";
 import * as Icons from "@heroicons/react/24/outline";
 import myGlobalContext from "../context";
 
 // import { NavLink, Link } from "react-router-dom";
 const Header = () => {
-  const { setOpenAndClose,countCartItems} =
+  const { setOpenAndClose,countCartItems, setRunme,setSubTotal,setCartOpen, subTotalFunction,totalQty, setTotalQty} =
     useContext(myGlobalContext);
   const [visible, setVisible] = useState("hidden");
   const [visible1, setVisible1] = useState("");
@@ -85,11 +85,11 @@ const Header = () => {
               </Link>
             </li>
             <li className=" md:inline mr-4 mt-2 lg:mt-0 hover:text-indigo-400">
-              <Link to="/About">
+              <Link to="/AdminDashboard">
                 <div className="flex items-center space-x-2 mt-2">
-                  <RiQuestionnaireLine className="text-white" size={25} />
+                  <RiDashboard2Line className="text-white" size={25} />
                   <div>
-                    <p>About</p>
+                    <p>Dashboard</p>
                   </div>
                 </div>
               </Link>
@@ -120,17 +120,24 @@ const Header = () => {
             <li className=" hover:text-indigo-400 md:inline mr-4 mt-2 lg:mt-0 "
             
             >
-              <Link href="/">
-                <div className="flex items-center space-x-2 ">
-                  <BiCartAlt className="text-white" size={25} />
+              
+                <div className="flex items-center space-x-2 cursor-pointer"
+                 onClick={()=> {
+                  setCartOpen(true)
+                  setRunme(prev => !prev)
+                 }}
+                >
+                  <BiCartAlt className="text-white" size={25} 
+                 
+                  />
                   <div>
                     <p className="text-zinc-800 bg-white rounded-full text-center">
-            {countCartItems}
+            {totalQty}
                     </p>
                     <p>$0.00</p>
                   </div>
                 </div>
-              </Link>
+             
             </li>
           </ul>
         </nav>

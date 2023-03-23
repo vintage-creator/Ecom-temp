@@ -6,18 +6,97 @@ const Provider = ({ children }) => {
   const [countCartItems, setCountCartItems] = useState(0);
   const [selectedItems, SetSelectedItems] = useState([]);
   const [runme, setRunme] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const [books, setBooks] = useState([]);
+  const [subTotal, setSubTotal] = useState(0);
+  const [totalQty, setTotalQty] = useState(0);
+  const [moreArticles, setMoreArticles] = useState(false);
+  const [paymentOpen, setPaymentOpen] = useState(false);
 
+  const roundNum =(num)=>{
+    const newNum = num.toFixed(2)
+    return newNum
+    }
 
-  // const cartCount = ()=>{
-    
-  //   if(selectedItems.length > 0){
-  //      const allCount = selectedItems.map((x) => x.quantity).reduce((a,b)=>  a + b,0)
-  //     // console.log(allCount,"upper count")
-  //     return allCount
-  //   }
-    
-  //  }
+  const uniqueCount = (id) => {
+    const newCount = selectedItems.find((x) => x.id === id);
+    if (newCount) {
+      return newCount.quantity;
+    }
+  };
+
+  const IncreaseUniqueCount = (items) => {
+    const data = selectedItems.findIndex(
+      (singleItem) => singleItem.id === items.id
+    );
+
+    const data1 = selectedItems.find(
+      (singleItem) => singleItem.id === items.id
+    );
+
+    if (data !== -1) {
+      const specific = selectedItems[data];
+      specific.quantity = specific.quantity + 1;
+      // return uniqueCount(items.id)
+      console.log(data1, "winner");
+
+      setRunme((prev) => !prev);
+    }
+  };
+
+  const DecreaseUniqueCount = (items) => {
+    const data = selectedItems.findIndex(
+      (singleItem) => singleItem.id === items.id
+    );
+
+    const data1 = selectedItems.find(
+      (singleItem) => singleItem.id === items.id
+    );
+
+    if (data !== -1) {
+      const specific = selectedItems[data];
+      if (specific.quantity > 1) {
+        specific.quantity = specific.quantity - 1;
+      }
+      // return uniqueCount(items.id)
+      console.log(data1, "losser");
+
+      setRunme((prev) => !prev);
+    }
+  };
+
+  const totalQtyFunction = useCallback(() => {
+    const data = selectedItems
+      .map((x) => x.quantity)
+      .reduce((a, b) => a + b, 0);
+
+    return setTotalQty(data);
+  }, [selectedItems]);
+  useEffect(() => {
+    totalQtyFunction();
+  }, [runme, totalQtyFunction]);
+
+  const subTotalFunction = useCallback(() => {
+    const data = selectedItems
+      .map((x) => x.price * x.quantity)
+      .reduce((a, b) => a + b, 0);
+
+    return setSubTotal(data);
+  }, [selectedItems]);
+  useEffect(() => {
+    subTotalFunction();
+  }, [runme, subTotalFunction]);
+
+  const deleteCartItem = (items) => {
+    const data = selectedItems.filter((x) => x.id !== items.id);
+
+    SetSelectedItems(data);
+  };
+
+  const checkoutHandler = () => {
+    setCartOpen(false)
+    setPaymentOpen(true)
+  };
   // =========>>> STORE FUNCTIONS ENDS HERE
 
   //=========>>> BLOG STARTS FUNCTIONS HERE
@@ -123,7 +202,23 @@ const Provider = ({ children }) => {
     setBooks,
     runme,
     setRunme,
-    countCartItems, setCountCartItems
+    countCartItems,
+    setCountCartItems,
+    uniqueCount,
+    IncreaseUniqueCount,
+    DecreaseUniqueCount,
+    subTotal,
+    totalQty,
+    setTotalQty,
+    setSubTotal,
+    subTotalFunction,
+    cartOpen,
+    setCartOpen,
+    deleteCartItem,
+    moreArticles,
+    setMoreArticles,
+    checkoutHandler,
+    paymentOpen, setPaymentOpen, roundNum
     // =========>>> STORE VALUES ENDS HERE
   };
 

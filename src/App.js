@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './screens/Home';
 import Store from './screens/Store';
-import About from './screens/About';
+import AdminDashboard from './screens/AdminDashboard';
 import Layout from './components/Layout';
 import BlogDetailPage from './screens/BlogDetailPage';
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route  path="/About" element={<About />}/>
+            <Route  path="/AdminDashboard" element={<AdminDashboard />}/>
             <Route  path="/Store" element={<Store />}/>
             <Route  path="/BlogDetailPage/:myId" element={<BlogDetailPage />}/>
           </Route>

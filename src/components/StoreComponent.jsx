@@ -212,20 +212,14 @@ const allBooks = [
 ];
 
 const StoreComponent = () => {
-  const { selectedItems, SetSelectedItems, books, setBooks,runme, setRunme,countCartItems, setCountCartItems  } =
+  const { selectedItems, SetSelectedItems, books, setBooks,runme, setRunme,countCartItems, setCountCartItems,uniqueCount ,setCartOpen, setSubTotal,subTotalFunction } =
     useContext(myGlobalContext);
   // const sliceData = (data, start, end) => {
   //   const newData11 = data.slice(start, end);
   //   return newData11;
   // };
 
- const testIt=(id)=>{
-  const newCount = selectedItems.find((x)=> x.id === id)
-  if(newCount){
-    return newCount.quantity
-  }
-  
- }
+
   const loadData =useCallback( ()=>{
     setBooks(allBooks)
   },[setBooks])
@@ -236,6 +230,7 @@ const StoreComponent = () => {
   }, [loadData,runme])
   
   const addToCartHandler = (items) => {
+    
     if (selectedItems.length === 0) {
       SetSelectedItems([
         {
@@ -271,10 +266,8 @@ const StoreComponent = () => {
       }
     }
     
-    setRunme(prev => !prev)
     
-    // setCountCartItems(cartCount())
-    setCountCartItems(prev => prev +1)
+    setRunme(prev => !prev)
   };
   
   console.log(countCartItems,"minimee")
@@ -326,7 +319,7 @@ const StoreComponent = () => {
                     <div className="rounded-full h-6 w-6 bg-gray-200 flex justify-center items-center p-[5px] ">
                       {items.quantity !== 0 ? ""
                       :
-                       testIt(items.id)
+                       uniqueCount(items.id)
                      
                       }
                     </div>
