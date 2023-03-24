@@ -46,7 +46,7 @@ const Header = () => {
         </div>
       </div>
       <div className="py-4 px-4 md:px-20 md:py-4 bg-[rgb(16,24,31)] lg:flex lg:items-center lg:justify-between">
-        <p className="text-xl font-bold text-indigo-300 mr-4">ChimaUX</p>
+        <p className="text-xl font-bold text-indigo-300 mr-4">Ugorji Promise</p>
         <div className="flex items-center justify-between space-x-6 my-3">
           <div className=" w-[70vw] flex rounded bg-white overflow-hidden justify-between  md:w-[30vw] md:min-w-[400px] ">
             <input

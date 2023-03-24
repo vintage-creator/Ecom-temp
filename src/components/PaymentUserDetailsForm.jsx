@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FiMinimize2 } from "react-icons/fi";
 import myGlobalContext from "../context";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import "./Spinner.css";
 import { PaystackButton } from 'react-paystack'
 import { ToastContainer, toast } from 'react-toastify';

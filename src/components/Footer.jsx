@@ -104,12 +104,12 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="md:flex md:items-center md:mt-14 md:justify-between">
+            <div className="md:flex md:items-center md:mt-14 md:justify-start">
               <p className="text-zinc-500 my-8">
-                Copyright ©2023 All rights reserved | Ecommerce made with
-                &#128420; by <span className="text-green-600">ChimaUX</span>
+                Copyright ©2023 All rights reserved | Ecommerce and Blog made with
+                &#128420; by <span className="text-green-600">Chima</span>
               </p>
-              ghgfh ngfnhnhndh
+    
             </div>
           </footer>
         </div>
