@@ -200,7 +200,7 @@ function PostComponent() {
             );
           })}
       </div>
-      { moreArticles === false   &&  <div
+      { moreArticles === false && loadData.length > 6   &&  <div
           className="w-[40vw] cursor-pointer flex justify-center items-center my-2 py-2 rounded-lg border-[1.5px] border-zinc-700 mx-4"
           onClick={() => setMoreArticles((prev) => !prev)}
         >
@@ -208,7 +208,7 @@ function PostComponent() {
         </div>}
 
         
-    { moreArticles === true   &&  <div
+    { moreArticles === true && loadData.length > 6  &&  <div
           className="w-[40vw] cursor-pointer flex justify-center items-center my-2 py-2 rounded-lg border-[1.5px] border-zinc-700 mx-4"
           onClick={() => setMoreArticles((prev) => !prev)}
         >
