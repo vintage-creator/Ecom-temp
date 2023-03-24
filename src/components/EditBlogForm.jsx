@@ -25,7 +25,7 @@ function EditBlogForm() {
   };
 
   const newData = { id: uuidv4(), title, image, date, desc };
-  const updatePost = () => {
+  const updatePost2 = () => {
     setSpinner2(true);
     setTimeout(() => {
       const getData = localStorage.getItem("post")
@@ -142,7 +142,7 @@ function EditBlogForm() {
         {title && image && date && desc ? (
           <button
             className="bg-[#86efac] pl-3 py-2  w-[50%] rounded font-bold mt-8 tracking-wider text-zinc-900"
-            onClick={updatePost}
+            onClick={updatePost2}
           >
             SUBMIT
           </button>
@@ -151,7 +151,7 @@ function EditBlogForm() {
             type="button"
             disabled
             className="cursor-not-allowed bg-[#86efac] opacity-50 pl-3 py-2  w-[50%] rounded font-bold mt-8 tracking-wider text-zinc-900"
-            onClick={updatePost}
+            onClick={updatePost2}
           >
             SUBMIT
           </button>
