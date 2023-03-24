@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
+
+
 import { BiCartDownload } from "react-icons/bi";
 import myGlobalContext from "../context";
 import { useContext } from "react";
@@ -212,7 +212,7 @@ const allBooks = [
 ];
 
 const StoreComponent = () => {
-  const { selectedItems, SetSelectedItems, books, setBooks,runme, setRunme,countCartItems, setCountCartItems,uniqueCount ,setCartOpen, setSubTotal,subTotalFunction } =
+  const { selectedItems, SetSelectedItems, books, setBooks,runme, setRunme,countCartItems, uniqueCount ,} =
     useContext(myGlobalContext);
   // const sliceData = (data, start, end) => {
   //   const newData11 = data.slice(start, end);
