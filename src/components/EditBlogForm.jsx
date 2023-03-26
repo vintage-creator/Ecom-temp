@@ -10,9 +10,16 @@ function EditBlogForm() {
     setOpenAndClose2,
     data2,
     setUserData2,
-    postID,
+    postID,setComponentName,setRunme
   } = useContext(myGlobalContext);
 
+  const componentName1 = ()=>{
+    setComponentName("editPost")
+  }
+
+  useEffect(()=>{
+    componentName1()
+  })
   const { title, image, date, desc } = data2;
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -54,6 +61,7 @@ function EditBlogForm() {
         date: "",
         desc: "",
       });
+      setRunme(prev => !prev)
       setSpinner2(false);
     }, 3000);
   };
