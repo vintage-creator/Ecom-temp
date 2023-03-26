@@ -1,6 +1,4 @@
 import React, { useCallback, useEffect } from "react";
-
-
 import { BiCartDownload } from "react-icons/bi";
 import myGlobalContext from "../context";
 import { useContext } from "react";

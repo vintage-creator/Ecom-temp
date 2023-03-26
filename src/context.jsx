@@ -2,6 +2,10 @@ import React, { useCallback, useEffect, useState } from "react";
 const myGlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
+  // =========>>> ADMIN FUNCTIONS STARTS HERE
+  const [page, setPage] = useState("");
+
+  // =========>>> ADMIN FUNCTIONS ENDS HERE
   // =========>>> STORE FUNCTIONS STARTS HERE
   const [countCartItems, setCountCartItems] = useState(0);
   const [selectedItems, SetSelectedItems] = useState([]);
@@ -13,10 +17,10 @@ const Provider = ({ children }) => {
   const [moreArticles, setMoreArticles] = useState(false);
   const [paymentOpen, setPaymentOpen] = useState(false);
 
-  const roundNum =(num)=>{
-    const newNum = num.toFixed(2)
-    return newNum
-    }
+  const roundNum = (num) => {
+    const newNum = num.toFixed(2);
+    return newNum;
+  };
 
   const uniqueCount = (id) => {
     const newCount = selectedItems.find((x) => x.id === id);
@@ -94,13 +98,14 @@ const Provider = ({ children }) => {
   };
 
   const checkoutHandler = () => {
-    setCartOpen(false)
-    setPaymentOpen(true)
+    setCartOpen(false);
+    setPaymentOpen(true);
   };
   // =========>>> STORE FUNCTIONS ENDS HERE
 
   //=========>>> BLOG STARTS FUNCTIONS HERE
-  const [openAndClose, setOpenAndClose] = useState("hidden");
+  const [componentName, setComponentName] = useState("");
+
   const [openAndClose2, setOpenAndClose2] = useState("hidden");
   const [formButton, setFormButton] = useState("hidden");
   const [loadData, setLoadData] = useState([]);
@@ -132,22 +137,14 @@ const Provider = ({ children }) => {
       date: `${date}`,
     });
   }, [postID]);
-
+//edit post
   useEffect(() => {
     getPostData();
-  }, [openAndClose2, getPostData]);
+  }, [runme, getPostData]);
 
   useEffect(() => {
     Items();
-    console.log(
-      openAndClose,
-      "**** ",
-      openAndClose2,
-      "**** ",
-      deleteMe,
-      "close the hole2222"
-    );
-  }, [openAndClose, openAndClose2, deleteMe]);
+  }, [runme, deleteMe]);
 
   const Items = () => {
     const getPostData = localStorage.getItem("post")
@@ -169,15 +166,12 @@ const Provider = ({ children }) => {
 
   // =========>>> STORE VALUES STARTS HERE
   const store = {
-    openAndClose,
-    setOpenAndClose,
     loadData,
     setLoadData,
     spinner,
     setSpinner,
     deleteHandler,
-    openAndClose2,
-    setOpenAndClose2,
+
     spinner2,
     setSpinner2,
     loadData2,
@@ -192,7 +186,7 @@ const Provider = ({ children }) => {
     detailPageID,
     setDetailPageID,
     formButton,
-    setFormButton,
+    setFormButton,openAndClose2, setOpenAndClose2,
     // =========>>> BLOG VALUES ENDS HERE
 
     // =========>>> STORE VALUES STARTS HERE
@@ -218,8 +212,17 @@ const Provider = ({ children }) => {
     moreArticles,
     setMoreArticles,
     checkoutHandler,
-    paymentOpen, setPaymentOpen, roundNum
+    paymentOpen,
+    setPaymentOpen,
+    roundNum,
     // =========>>> STORE VALUES ENDS HERE
+    // =========>>> ADMIN FUNCTIONS STARTS HERE
+
+    // =========>>> ADMIN FUNCTIONS ENDS HERE
+    componentName,
+    setComponentName,
+    page,
+    setPage,
   };
 
   return (

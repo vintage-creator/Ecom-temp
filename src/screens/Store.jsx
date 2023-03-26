@@ -1,11 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import StoreComponent from "../components/StoreComponent";
 import CartComponent from "../components/CartComponent";
 import PaymentModal from "../components/PaymentModal";
 import PaymentUserDetailsForm from "../components/PaymentUserDetailsForm";
 import myGlobalContext from "../context";
 const Store = () => {
-const {cartOpen, paymentOpen} = useContext(myGlobalContext)
+  
+const {cartOpen, paymentOpen, setPage} = useContext(myGlobalContext)
+
+
+const pageName = ()=>{
+  setPage("store")
+}
+
+useEffect(()=>{
+  pageName()
+})
+
   return (
     <div className="relative">
       <div className="absolute z-10 top-[250px] md:top-[150px] left-8 w-[70vw] md:w-[60vw]">

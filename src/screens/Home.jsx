@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Modal from "../components/Modal";
 import AddBlogPostTab from "../components/AddBlogPostTab";
 import PostComponent from "../components/PostComponent";
 import EditPostModal from "../components/EditPostModal";
 import EditBlogForm from "../components/EditBlogForm";
+import myGlobalContext from "../context";
+
+
 function Home() {
+  const {setPage}=useContext(myGlobalContext)
+  
+
+
+  const pageName = ()=>{
+    setPage("home")
+  }
+
+  useEffect(()=>{
+    pageName()
+  })
+
   return (
     
-    <div className="relative">
-      <div className="absolute z-10 top-[250px] md:top-[150px] left-8 w-[70vw] md:w-[60vw]">
+    <div>
+            
+      <div className="absolute z-10 top-[300px] md:top-[200px] left-8 w-[70vw] md:w-[60vw]">
         <h1 className="text-white text-2xl md:text-6xl mb-4 font-bold">
           Zanzibar Tech Island
         </h1>
@@ -27,13 +43,13 @@ function Home() {
       >
         <div className="w-full h-[700px] md:h-[600px] bg-[rgba(0,0,0,0.3)]"></div>
       </div>
-      <EditPostModal>
+      {/* <EditPostModal>
         <EditBlogForm />
       </EditPostModal>
 
       <Modal>
         <AddBlogPostTab />
-      </Modal>
+      </Modal> */}
 
       <PostComponent />
     </div>

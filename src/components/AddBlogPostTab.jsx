@@ -1,13 +1,11 @@
-import React, { useContext, useState } from "react";
-import { FiMinimize2 } from "react-icons/fi";
+import React, { useContext, useEffect, useState } from "react";
 import myGlobalContext from "../context";
 import { v4 as uuidv4 } from "uuid";
 import "./Spinner.css";
 function AddBlogPostTab() {
-  const { spinner, setSpinner, setOpenAndClose, loadData } =
+  const { spinner, setSpinner,setRunme} =
     useContext(myGlobalContext);
 
-  console.log(loadData);
 
   const [data, setUserData] = useState({
     title: "",
@@ -43,22 +41,23 @@ function AddBlogPostTab() {
         date: "",
         desc: "",
       });
+      setRunme(prev => !prev)
       setSpinner(false);
     }, 3000);
   };
   return (
     <div className=" bg-white rounded-md drop-shadow-xl p-2">
-      <div className="  w-[60vw] p-16 h-[60vh] relative overflow-y-scroll">
+      <div className="  w-[60vw] p-16  relative ">
         {""}
 
         <h2 className="text-zinc-900 font-bold text-xl">Add Blog Post</h2>
 
-        <div
+        {/* <div
           className=" rounded-full absolute right-4 top-4 cursor-pointer"
           onClick={() => setOpenAndClose("hidden")}
         >
            <FiMinimize2 size={24} className="text-[#10181f]"/> 
-        </div>
+        </div> */}
 
         <div className="mt-4">
           <label
