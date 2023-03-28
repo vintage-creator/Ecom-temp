@@ -18,16 +18,18 @@ function AdminDashboard() {
     pageName();
   });
   return (
-    <div className="flex">
+    <div className="md:flex">
+      <div className="w-[100vw] md:w-[30vw] overflow-hidden">
       <SideMenu />
+      </div>
       {componentName === "addPost" && (
-        <div className="p-8">
+        <div className="w-[65%] p-8 flex justify-center items-center">
           <AddBlogPostTab />
         </div>
       )}
 
 {componentName === "editPost" && 
-<div className="p-8">
+<div className="w-full md:w-[65%] flex justify-center items-center">
 <AllArticles/>
 </div>
 }
