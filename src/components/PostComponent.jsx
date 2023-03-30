@@ -147,7 +147,7 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
 
             <div className="flex justify-end mb-2">
 
-            <div className="w-full flex justify-end mb-2">
+          <div className="w-full flex justify-end mb-2">
           <RWebShare
              data={{
               title: `${items.title}`,
