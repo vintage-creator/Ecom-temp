@@ -63,17 +63,19 @@ function EditBlogForm() {
       });
       setRunme(prev => !prev)
       setSpinner2(false);
+      setOpenAndClose2("hidden")
     }, 3000);
+    
   };
 
   return (
-    <div className="bg-[#f6f5ec] rounded-md drop-shadow-xl p-2">
-      <div className="  w-[60vw] p-16 h-[60vh] relative overflow-y-scroll">
+    <div className="bg-[#f6f5ec]  drop-shadow-xl p-2">
+      <div className=" w-[80vw] p-8 relative overflow-y-scroll md:w-[60vw] md:p-16 h-[80vh] ">
         {""}
 
         <h2 className="text-zinc-900 font-bold text-xl">Edit Blog Post</h2>
 
-        <div className="absolute right-4 top-4"
+        <div className="fixed right-12 top-8"
          onClick={() => setOpenAndClose2("hidden")}
         >
            <FiMinimize2 size={24} className="text-[#10181f]"/> 
@@ -81,7 +83,7 @@ function EditBlogForm() {
 
         <div className="mt-4">
           <label
-            className="tracking-wider text-zinc-700"
+            className="tracking-wider text-zinc-900"
             style={{ fontWeight: "bold" }}
           >
             Title
@@ -97,7 +99,7 @@ function EditBlogForm() {
 
         <div className="mt-4">
           <label
-            className="tracking-wider text-zinc-700"
+            className="tracking-wider text-zinc-900"
             style={{ fontWeight: "bold" }}
           >
             Image URL
@@ -113,7 +115,7 @@ function EditBlogForm() {
 
         <div className="mt-4">
           <label
-            className="tracking-wider text-zinc-700"
+            className="tracking-wider text-zinc-900"
             style={{ fontWeight: "bold" }}
           >
             Description
@@ -131,7 +133,7 @@ function EditBlogForm() {
         <div className="mt-4">
           <div>
             <label
-              className="tracking-wider text-zinc-700"
+              className="tracking-wider text-zinc-900"
               style={{ fontWeight: "bold" }}
             >
               Date

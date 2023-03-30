@@ -64,7 +64,8 @@ const Header = () => {
 </div>
 }
 
-          <CgMenuLeft
+<div >
+<CgMenuLeft
             size={23}
             className={`${visible1} lg:hidden text-white`}
             onClick={toggleMenu}
@@ -74,17 +75,18 @@ const Header = () => {
             className={`${visible2} lg:hidden text-white`}
             onClick={toggleMenu}
           />
+</div>
         </div>
         {/* ${visible} */}
-        <nav
+        <div
           className={`${
             visible === "hidden"
               ? ` h-0 overflow-hidden`
-              : `h-22 overflow-hidden`
-          } lg:block  text-white text-sm mt-6 lg:mt-0 lg:ml-16 lg:h-[unset]  duration-500`}
+              : `h-22  overflow-hidden`
+          }   text-white text-sm mt-6 lg:mt-0 lg:ml-16 lg:h-[unset] duration-500 `}
         >
-          <ul className="flex flex-wrap items-center justify-between
-         ">
+   <nav>
+   <ul className="gap-y-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:place-items-center ">
             <li className=" md:inline mr-6 mt-2 lg:mt-0 ">
               <Link to="/">
              
@@ -136,7 +138,8 @@ const Header = () => {
               </div>
             </li>
           </ul>
-        </nav>
+   </nav>
+        </div>
       </div>
       <div></div>
     </div>
