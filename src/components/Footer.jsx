@@ -31,8 +31,8 @@ const Footer = () => {
         <div className="bg-[#1e2f3b]">
           <footer className="w-full bg-[#1e2f3b] p-8">
             <div>
-              <div>
-                <div className="md:flex md:space-x-8 md:justify-between">
+           
+                <div className="grid grid-cols-1 gap-y-2   xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2">
                   <div>
                     <div>
                       <h4 className="w-full text-2xl font-bold text-white mt-4">
@@ -43,7 +43,7 @@ const Footer = () => {
                       <p className="text-zinc-500 my-2">General Consutancy</p>
                       <p className="text-zinc-500 my-2">Structured Assesment</p>
                     </div>
-                    <div className="flex w-[150px]  space-x-1">
+                    <div className="flex w-[150px]  space-x-2 py-2">
                       <div className="bg-zinc-700 min-w-[30px] min-h-[30px] rounded-full flex justify-center items-center">
                         <TfiTwitter size={19} className="text-gray-400"/>
                       </div>
@@ -100,7 +100,7 @@ const Footer = () => {
                     <p className="text-zinc-500 my-2">Charts</p>
                     <p className="text-zinc-500 my-2">Privacy</p>
                   </div>
-                </div>
+        
               </div>
             </div>
 
