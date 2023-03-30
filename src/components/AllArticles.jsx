@@ -9,21 +9,11 @@ function AllArticles() {
     deleteHandler,
     setOpenAndClose2,
     setPostID,
-    moreArticles,
-    setMoreArticles,
+
   } = useContext(myGlobalContext);
 
-  const sliceData = (data, start, end) => {
-    const newData11 = data.slice(start, end);
-    return newData11;
-  };
 
-  const sliceData2 = (data, start) => {
-    const newData11 = data.slice(start);
-    return newData11;
-  };
 
-  console.log(loadData, "chcihci");
 
   // Trucate text fuction starts here
   const truncateText = (text, maxLength) => {
@@ -37,11 +27,11 @@ function AllArticles() {
 
   return (
     <>
-      <div className="flex flex-wrap   justify-center items-center  px-4 md:px-14 md:flex md:flex-row md:justify-between">
-        {loadData.map((items) => {
+     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {loadData.length>0?loadData.map((items) => {
           return (
             <div
-              className="overflow-hidden w-[90vw] h-[300px] md:w-[40vw] lg:w-[15vw] bg-white   rounded-lg my-6 "
+              className=" h-[300px]  bg-white  "
               key={items.id}
               style={{
                 boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`,
@@ -49,14 +39,14 @@ function AllArticles() {
             >
               <Link to={`/BlogDetailPage/${items.id}`}>
                 <div
-                  className="w-[100%] h-[100px] bg-cover bg-center bg-no-repeat mb-2"
+                  className="w-[100%] h-[150px] md:h-[140px] bg-cover bg-center bg-no-repeat mb-2"
                   style={{ backgroundImage: `url("${items.image}")` }}
                 ></div>
               </Link>
-              <div className="flex flex-col justify-between  h-[180px] text-left ml-4 w-[90%] tracking-wider  uppercase text-[0.9rem] md:text-[0.8rem] ">
-                <p className="mb-4">{truncateText(items.title, 69)}</p>
+              <div className="grid grid-rows-2 h-[140px]  text-left  tracking-wider  uppercase text-[0.9rem] md:text-[0.8rem]">
+                <p className="mb-4 mx-2">{truncateText(items.title, 69)}</p>
 
-                <div className="w-[90%] flex justify-between mb-2">
+                <div className="self-end justify-items-center  grid grid-cols-3 mb-2 px-2 ">
                   <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 hover:bg-gray-100 cursor-pointer">
                     <RiDeleteBin4Line
                       size={18}
@@ -64,7 +54,7 @@ function AllArticles() {
                       onClick={() => deleteHandler(items.id)}
                     />
                   </div>
-                  <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 hover:bg-gray-100 cursor-pointer">
+                  <div className=" rounded-full flex items-center justify-center bg-gray-300 p-2 hover:bg-gray-100 cursor-pointer">
                     {" "}
                     <RiEditLine
                       size={18}
@@ -81,7 +71,7 @@ function AllArticles() {
                       }}
                     />
                   </div>
-                  <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 hover:bg-gray-100 cursor-pointer">
+                  <div className=" rounded-full flex items-center justify-center bg-gray-300 p-2 hover:bg-gray-100 cursor-pointer">
                     {" "}
                     <RiShareLine size={18} className="text-blue-400" />
                   </div>
@@ -89,9 +79,14 @@ function AllArticles() {
               </div>
             </div>
           );
-        })}
+        } )
+    :
 
-       </div>
+      <p className="font-semibold text-2xl text-center py-2 text-zinc-900 tracking-wider">No blog post yet, create your first blog post.</p>
+    
+      }
+
+       </div> 
 
     </>
   );

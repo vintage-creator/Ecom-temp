@@ -38,7 +38,7 @@ function PostComponent() {
   return (
     <>
 {
-loadData.length === 0 ? <p className="font-semibold tracking-wider text-2xl">No Blog Post Yet Go To Dashboard to Add Post</p>:
+loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider text-center text-2xl">No blog post yet, go to the Dashboard and create your first blog post</p>:
 ( 
 
 <>

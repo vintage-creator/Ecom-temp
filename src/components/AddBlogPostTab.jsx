@@ -47,10 +47,10 @@ function AddBlogPostTab() {
   };
   return (
     <div className=" bg-white rounded-md drop-shadow-xl p-2">
-      <div className="  w-[60vw] p-16  relative ">
+      <div className="  w-full  p-16  relative ">
         {""}
 
-        <h2 className="text-zinc-900 font-bold text-xl">Add Blog Post</h2>
+        <h2 className="text-zinc-900 font-bold text-xl tracking-wider font-semibold">CREATE NEW POST</h2>
 
         {/* <div
           className=" rounded-full absolute right-4 top-4 cursor-pointer"
@@ -61,7 +61,7 @@ function AddBlogPostTab() {
 
         <div className="mt-4">
           <label
-            className="tracking-wider text-zinc-700"
+            className="tracking-wider text-zinc-900"
             style={{ fontWeight: "bold" }}
           >
             Title
@@ -77,7 +77,7 @@ function AddBlogPostTab() {
 
         <div className="mt-4">
           <label
-            className="tracking-wider text-zinc-700"
+            className="tracking-wider text-zinc-900"
             style={{ fontWeight: "bold" }}
           >
             Image URL
@@ -93,7 +93,7 @@ function AddBlogPostTab() {
 
         <div className="mt-4">
           <label
-            className="tracking-wider text-zinc-700"
+            className="tracking-wider text-zinc-900"
             style={{ fontWeight: "bold" }}
           >
             Description
@@ -111,7 +111,7 @@ function AddBlogPostTab() {
         <div className="mt-4">
           <div>
             <label
-              className="tracking-wider text-zinc-700"
+              className="tracking-wider text-zinc-900"
               style={{ fontWeight: "bold" }}
             >
               Date

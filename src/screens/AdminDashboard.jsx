@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect } from "react";
+import React, {  useContext, useEffect } from "react";
 import SideMenu from "../components/SideMenu";
 import myGlobalContext from "../context";
 import AddBlogPostTab from "../components/AddBlogPostTab";
@@ -18,31 +18,23 @@ function AdminDashboard() {
     pageName();
   });
   return (
-    <div className="md:flex">
-      <div className="w-[100vw] md:w-[30vw] overflow-hidden">
-      <SideMenu />
-      </div>
-      {componentName === "addPost" && (
-        <div className="w-[65%] p-8 flex justify-center items-center">
-          <AddBlogPostTab />
-        </div>
-      )}
+    <div className="bg-gray-300 grid  md:grid-cols-4 md:gap-x-4 p-6 ">
+      <div className="mt-2  rounded overflow-y-scroll md:h-screen bg-gray-300 md:col-span-3 ">
+      {componentName === "addPost" && <AddBlogPostTab />}
+        {componentName === "editPost" && <AllArticles />}
 
-{componentName === "editPost" && 
-<div className="w-full md:w-[65%] flex justify-center items-center">
-<AllArticles/>
-</div>
-}
-
-
-      {componentName === "editPost" && (
-        <div className="p-8">
+        {componentName === "editPost" && (
           <EditPostModal>
-        <EditBlogForm />
-      </EditPostModal>
-        </div>
-      )} 
+            <EditBlogForm />
+          </EditPostModal>
+        )}
+      
+      </div>
+      <div className="grid order-first py-2 md:py-4 md:grid md:order-[unset] bg-[#10181f] rounded overflow-hidden md:h-screen">
+        <SideMenu />
+      </div>
     </div>
+
   );
 }
 
