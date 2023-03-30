@@ -1,6 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { FiMinimize2 } from "react-icons/fi";
 import myGlobalContext from "../context";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { v4 as uuidv4 } from "uuid";
 import "./Spinner.css";
 function EditBlogForm() {
@@ -10,16 +12,18 @@ function EditBlogForm() {
     setOpenAndClose2,
     data2,
     setUserData2,
-    postID,setComponentName,setRunme
+    postID,
+    setComponentName,
+    setRunme,
   } = useContext(myGlobalContext);
 
-  const componentName1 = ()=>{
-    setComponentName("editPost")
-  }
+  const componentName1 = () => {
+    setComponentName("editPost");
+  };
 
-  useEffect(()=>{
-    componentName1()
-  })
+  useEffect(() => {
+    componentName1();
+  });
   const { title, image, date, desc } = data2;
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -61,11 +65,13 @@ function EditBlogForm() {
         date: "",
         desc: "",
       });
-      setRunme(prev => !prev)
+      setRunme((prev) => !prev);
       setSpinner2(false);
-      setOpenAndClose2("hidden")
+
+      toast.success("Edited and updated successfully");
+        // setOpenAndClose2("hidden");
+ 
     }, 3000);
-    
   };
 
   return (
@@ -75,10 +81,11 @@ function EditBlogForm() {
 
         <h2 className="text-zinc-900 font-bold text-xl">Edit Blog Post</h2>
 
-        <div className="fixed right-12 top-8"
-         onClick={() => setOpenAndClose2("hidden")}
+        <div
+          className="fixed right-12 top-8"
+          onClick={() => setOpenAndClose2("hidden")}
         >
-           <FiMinimize2 size={24} className="text-[#10181f]"/> 
+          <FiMinimize2 size={24} className="text-[#10181f]" />
         </div>
 
         <div className="mt-4">
@@ -166,6 +173,11 @@ function EditBlogForm() {
             SUBMIT
           </button>
         )}
+        <ToastContainer 
+        autoClose={2000}
+        closeOnClick
+        pauseOnHover
+        />
       </div>
     </div>
   );
