@@ -87,7 +87,7 @@ function AllArticles() {
           })
         ) : (
           <p className="font-semibold text-2xl text-center py-2 text-zinc-900 tracking-wider">
-            No blog post yet, create your first blog post.
+            Create your first blog post.
           </p>
         )}
       </div>
