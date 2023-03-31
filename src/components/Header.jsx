@@ -13,7 +13,7 @@ const Header = () => {
     page,
     setRunme,
     setCartOpen,
-    totalQty,
+    totalQty,subTotal,roundNum
   } = useContext(myGlobalContext);
 
 
@@ -133,7 +133,7 @@ const Header = () => {
                   <p className="text-zinc-800 bg-white rounded-full text-center">
                     {totalQty}
                   </p>
-                  <p>$0.00</p>
+                  <p>&#8358;{roundNum(subTotal)}</p>
                 </div>
               </div>
             </li>
