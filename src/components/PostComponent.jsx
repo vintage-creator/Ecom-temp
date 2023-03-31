@@ -3,13 +3,10 @@ import { RiShareLine } from "react-icons/ri";
 import myGlobalContext from "../context";
 import { RWebShare } from "react-web-share";
 import { Link } from "react-router-dom";
-
+import DemoBlogPost from "./DemoBlogPost";
 function PostComponent() {
   const {
     loadData,
-    deleteHandler,
-    setOpenAndClose2,
-    setPostID,
     moreArticles,
     setMoreArticles,
   } = useContext(myGlobalContext);
@@ -39,7 +36,7 @@ function PostComponent() {
   return (
     <>
 {
-loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider text-center text-2xl">No blog post yet, go to the Dashboard and create your first blog post</p>:
+loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider text-center text-2xl">Go to the Dashboard and create your first blog post</p>:
 ( 
 
 <>
@@ -186,6 +183,10 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
         >
           <p className="font-semibold tracking-wider text-lg">LESS ARTICLES</p>
         </div>}
+
+
+<DemoBlogPost/>
+
     </>
   );
 }
