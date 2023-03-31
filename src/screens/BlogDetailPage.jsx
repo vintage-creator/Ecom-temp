@@ -34,7 +34,7 @@ const BlogDetailPage = () => {
 
   return (
     <>
-      <h1 className="font-bold pt-60 px-4  text-3xl text-zinc-800 tracking-wider text-center w-full md:pb-6 md:pt-40">
+      <h1 className="font-bold pt-80 px-4  text-3xl text-zinc-800 tracking-wider text-center w-full md:pb-6 md:pt-52 lg:pt-40">
         {title}
       </h1>
       <div className="p-6">

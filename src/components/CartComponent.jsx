@@ -20,9 +20,11 @@ const CartComponent = () => {
   // const [quantityInput,setQuantityInput] = useState()
 
   return (
-    <div className="fixed top-0 left-0 right-0 sm:left-[5px] bottom-0 sm:right-[50vw] sm:top-[5px] z-30 ">
-      <div className="bg-white  rounded-lg w-[100vw] md:w-[50vw] pb-2">
-        <div className="w-full p-4 flex justify-end">
+    <div className="grid grid-cols-1 sm:grid-cols-2 fixed top-2 left-2 right-2 bottom-2 z-30 "
+    style={{backgroundColor:"rgba(0,0,0,0.5)"}}
+    > 
+      <div className="w-full bg-white  rounded">
+        <div className="w-full p-4 flex justify-end cursor-pointer">
           <FiMinimize2
             size={24}
             className="text-[#10181f]"

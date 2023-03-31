@@ -90,10 +90,10 @@ const Header = () => {
             <li className=" md:inline mr-6 mt-2 lg:mt-0 ">
               <Link to="/">
              
-                 <div className={` ${page === "home"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2 hover:text-indigo-400`}>
+                 <div className={` ${page === "home"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2 `}>
                  <BiHomeSmile className="text-white" size={25} />
                  <div>
-                   <p>Home</p>
+                   <p className="hover:text-indigo-400">Home</p>
                  </div>
                </div>
              
@@ -104,7 +104,7 @@ const Header = () => {
                 <div className={`${page === "adminDashboard"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2`}>
                   <RiDashboard2Line className="text-white" size={25} />
                   <div>
-                    <p>Dashboard</p>
+                    <p className="hover:text-indigo-400">Dashboard</p>
                   </div>
                 </div>
               </Link>
@@ -115,12 +115,12 @@ const Header = () => {
                 <div className={`${page === "store"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2`}>
                   <BiStore className="text-white" size={25} />
                   <div>
-                    <p>Store</p>
+                    <p className="hover:text-indigo-400">Store</p>
                   </div>
                 </div>
               </Link>
             </li>
-            <li className=" hover:text-indigo-400 md:inline mr-4 mt-2 lg:mt-0 ">
+            <li className=" md:inline mr-4 mt-2 lg:mt-0 ">
               <div
                 className="flex items-center space-x-2 cursor-pointer"
                 onClick={() => {
@@ -128,8 +128,8 @@ const Header = () => {
                   setRunme((prev) => !prev);
                 }}
               >
-                <BiCartAlt className="text-white" size={25} />
-                <div>
+                <BiCartAlt className="text-white " size={25} />
+                <div className="hover:text-indigo-400">
                   <p className="text-zinc-800 bg-white rounded-full text-center">
                     {totalQty}
                   </p>

@@ -1,5 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react"; 
 import myGlobalContext from "../context";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuidv4 } from "uuid";
 import "./Spinner.css";
 function AddBlogPostTab() {
@@ -43,14 +45,22 @@ function AddBlogPostTab() {
       });
       setRunme(prev => !prev)
       setSpinner(false);
+      toast.success("Posted successfully")
     }, 3000);
   };
   return (
+<>
+<ToastContainer
+    autoClose={2000}
+    closeOnClick
+    pauseOnHover
+/>
     <div className=" bg-white rounded-md drop-shadow-xl p-2">
-      <div className="  w-full  p-16  relative ">
+
+      <div className="  w-full  p-2 md:p-16  relative ">
         {""}
 
-        <h2 className="text-zinc-900 font-bold text-xl tracking-wider font-semibold">CREATE NEW POST</h2>
+        <h2 className="text-zinc-900 text-xl tracking-wider font-semibold">CREATE NEW POST</h2>
 
         {/* <div
           className=" rounded-full absolute right-4 top-4 cursor-pointer"
@@ -144,9 +154,12 @@ function AddBlogPostTab() {
           >
             SUBMIT
           </button>
+         
         )}
+
       </div>
     </div>
+</>
   );
 }
 

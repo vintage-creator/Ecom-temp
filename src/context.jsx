@@ -4,7 +4,7 @@ const myGlobalContext = React.createContext();
 const Provider = ({ children }) => {
   // =========>>> ADMIN FUNCTIONS STARTS HERE
   const [page, setPage] = useState("");
-
+  const [showdelete, setShowDelete] = useState("");
   // =========>>> ADMIN FUNCTIONS ENDS HERE
   // =========>>> STORE FUNCTIONS STARTS HERE
   const [countCartItems, setCountCartItems] = useState(0);
@@ -222,7 +222,7 @@ const Provider = ({ children }) => {
     componentName,
     setComponentName,
     page,
-    setPage,
+    setPage,showdelete, setShowDelete
   };
 
   return (

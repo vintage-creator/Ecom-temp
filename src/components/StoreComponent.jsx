@@ -282,11 +282,11 @@ const StoreComponent = () => {
 
   return (
     <>
-      <div className="flex flex-wrap  px-4 md:px-14 justify-center md:flex md:flex-row md:justify-between">
+      <div className="grid p-2 grid-cols-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:p-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-4">
         {books.map((items) => {
           return (
             <div
-              className="overflow-hidden w-[90vw] h-[600px] md:w-[40vw] lg:w-[25vw] xl:w-[20vw] bg-white   rounded-lg my-6 "
+              className="overflow-hidden  bg-white   rounded pb-2"
               key={items.id}
               style={{
                 boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`,

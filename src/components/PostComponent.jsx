@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import { RiDeleteBin4Line, RiEditLine, RiShareLine } from "react-icons/ri";
+import { RiShareLine } from "react-icons/ri";
 import myGlobalContext from "../context";
+import { RWebShare } from "react-web-share";
 import { Link } from "react-router-dom";
 
 function PostComponent() {
@@ -42,12 +43,12 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
 ( 
 
 <>
-<div className="w-full justify-center flex flex-wrap sm:flex sm:justify-center ">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 p-2 md:p-4">
   {sliceData(loadData, 0, 2).map((items) => {
     return (
       <div
         key={items.id}
-        className=" m-4 flex overflow-hidden w-[90vw]   sm:w-[42vw] bg-white  h-[150px] rounded-lg my-6 "
+        className="overflow-hidden bg-white   rounded"
         style={{
           boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`,
         }}
@@ -58,14 +59,24 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
             style={{ backgroundImage: `url("${items.image}")` }}
           ></div>
         </Link>
-        <div className="flex flex-col justify-between text-left ml-4 w-[47%] text-[0.9rem]  lg:text-[1rem] tracking-wider  uppercase">
+        <div className="flex flex-col justify-between text-left p-2 text-[0.9rem]  lg:text-[1rem] tracking-wider  uppercase">
           <p>{truncateText(items.title, 69)}</p>
 
           <div className="w-full flex justify-end mb-2">
+          <RWebShare
+             data={{
+              title: `${items.title}`,
+              url: `http://localhost:3000/BlogDetailPage/${items.id}`,
+            
+            }}
+            onClick={() => console.log("shared successfully!")}
+          >
             <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 cursor-pointer hover:bg-gray-100">
               {" "}
               <RiShareLine size={18} className="text-blue-400" />
             </div>
+      
+           </RWebShare >
           </div>
         </div>
       </div>
@@ -73,11 +84,11 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
   })}
 </div>
 
-<div className="flex flex-wrap  px-4 md:px-14 justify-center md:flex md:flex-row md:justify-between">
+<div className="grid gap-2 p-2 sm:grid-cols-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4  md:p-4">
   {sliceData(loadData, 2, 6).map((items) => {
     return (
       <div
-        className="overflow-hidden w-[90vw] h-[400px] md:w-[40vw] lg:w-[25vw] xl:w-[20vw] bg-white   rounded-lg my-6 "
+        className="overflow-hidden  bg-white   rounded "
         key={items.id}
         style={{
           boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`,
@@ -89,15 +100,26 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
             style={{ backgroundImage: `url("${items.image}")` }}
           ></div>
         </Link>
-        <div className="flex flex-col justify-between  h-[180px] text-left ml-4 w-[90%] tracking-wider  uppercase text-[0.9rem] lg:text-[1rem] md:text-[0.8rem] ">
+        <div className="flex flex-col justify-between  h-[180px] p-2 md:p-4 tracking-wider  uppercase text-[0.9rem] lg:text-[1rem] md:text-[0.8rem] ">
           <p className="mb-4">{truncateText(items.title, 69)}</p>
 
-          <div className="w-[90%] flex justify-end mb-2">
-   
-            <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 hover:bg-gray-100 cursor-pointer">
+          <div className="flex justify-end mb-2">
+          <div className="w-full flex justify-end mb-2">
+          <RWebShare
+             data={{
+              title: `${items.title}`,
+              url: `http://localhost:3000/BlogDetailPage/${items.id}`,
+            
+            }}
+            onClick={() => console.log("shared successfully!")}
+          >
+            <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 cursor-pointer hover:bg-gray-100">
               {" "}
               <RiShareLine size={18} className="text-blue-400" />
             </div>
+      
+           </RWebShare >
+          </div>
           </div>
         </div>
       </div>
@@ -108,7 +130,7 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
     sliceData2(loadData, 6).map((items) => {
       return (
         <div
-          className="overflow-hidden w-[90vw] h-[400px] md:w-[40vw] lg:w-[25vw] xl:w-[20vw] bg-white   rounded-lg my-6 "
+          className="overflow-hidden  bg-white   rounded "
           key={items.id}
           style={{
             boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`,
@@ -120,16 +142,27 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
               style={{ backgroundImage: `url("${items.image}")` }}
             ></div>
           </Link>
-          <div className="flex flex-col justify-between  h-[180px] text-left ml-4 w-[90%] tracking-wider  uppercase text-[0.9rem] lg:text-[1rem] md:text-[0.8rem] ">
+          <div className="flex flex-col justify-between  h-[180px] text-left p-2 md:p-4 tracking-wider  uppercase text-[0.9rem] lg:text-[1rem] md:text-[0.8rem] ">
             <p className="mb-4">{truncateText(items.title, 69)}</p>
 
-            <div className="w-[90%] flex justify-end mb-2">
+            <div className="flex justify-end mb-2">
 
-         
-              <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 hover:bg-gray-100 cursor-pointer">
-                {" "}
-                <RiShareLine size={18} className="text-blue-400" />
-              </div>
+          <div className="w-full flex justify-end mb-2">
+          <RWebShare
+             data={{
+              title: `${items.title}`,
+              url: `http://localhost:3000/BlogDetailPage/${items.id}`,
+            
+            }}
+            onClick={() => console.log("shared successfully!")}
+          >
+            <div className="rounded-full flex items-center justify-center bg-gray-300 p-2 cursor-pointer hover:bg-gray-100">
+              {" "}
+              <RiShareLine size={18} className="text-blue-400" />
+            </div>
+      
+           </RWebShare >
+          </div>
             </div>
           </div>
         </div>
@@ -140,7 +173,7 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
 )
 }
       { moreArticles === false && loadData.length > 6   &&  <div
-          className="w-[40vw] cursor-pointer flex justify-center items-center my-2 py-2 rounded-lg border-[1.5px] border-zinc-700 mx-4"
+          className="w-[40vw] cursor-pointer flex justify-center items-center my-2 py-2 rounded border-[1.5px] border-zinc-700 mx-4"
           onClick={() => setMoreArticles((prev) => !prev)}
         >
           <p className="font-semibold tracking-wider text-lg">MORE ARTICLES</p>
@@ -148,7 +181,7 @@ loadData.length === 0 ? <p className="font-semibold text-zinc-900 tracking-wider
 
         
     { moreArticles === true && loadData.length > 6  &&  <div
-          className="w-[40vw] cursor-pointer flex justify-center items-center my-2 py-2 rounded-lg border-[1.5px] border-zinc-700 mx-4"
+          className="w-[40vw] cursor-pointer flex justify-center items-center my-2 py-2 rounded border-[1.5px] border-zinc-700 mx-4"
           onClick={() => setMoreArticles((prev) => !prev)}
         >
           <p className="font-semibold tracking-wider text-lg">LESS ARTICLES</p>

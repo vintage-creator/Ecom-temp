@@ -60,13 +60,13 @@ const componentProps = {
     <>
     <ToastContainer />
     <div className=" bg-white rounded-md drop-shadow-xl p-2">
-      <div className="  w-[60vw] p-16 h-[60vh] relative overflow-y-scroll">
+      <div className="  w-[95vw] h-[60vh]  relative overflow-y-scroll p-4 sm:w-[60vw] md:w-[70vw] md:p-16 md:h-[80vh] ">
         {""}
 
         <h2 className="text-zinc-900 font-bold text-xl">PAYMENT FORM</h2>
 
         <div
-          className=" rounded-full absolute right-4 top-4 cursor-pointer"
+          className=" rounded-full absolute right-4 top-4 cursor-pointer cursor-pointer"
           onClick={() => setPaymentOpen(false)}
         >
            <FiMinimize2 size={24} className="text-[#10181f]"/> 
