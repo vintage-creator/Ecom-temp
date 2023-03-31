@@ -282,7 +282,7 @@ const StoreComponent = () => {
 
   return (
     <>
-      <div className="grid p-2 grid-cols-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:p-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-4">
+      <div className="grid gap-2 p-2 grid-cols-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:p-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-4">
         {books.map((items) => {
           return (
             <div
