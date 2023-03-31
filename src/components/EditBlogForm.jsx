@@ -96,7 +96,7 @@ function EditBlogForm() {
             Title
           </label>
           <input
-            className="  bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[100%] rounded outline-none"
+            className="  bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[100%] rounded outline-none"
             name="title"
             value={title}
             onChange={onChangeHandler}
@@ -112,7 +112,7 @@ function EditBlogForm() {
             Image URL
           </label>
           <input
-            className=" bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[100%] rounded outline-none"
+            className=" bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[100%] rounded outline-none"
             name="image"
             value={image}
             onChange={onChangeHandler}
@@ -128,7 +128,7 @@ function EditBlogForm() {
             Description
           </label>
           <textarea
-            className="resize-none bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[100%] rounded outline-none"
+            className="resize-none bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[100%] rounded outline-none"
             rows={10}
             name="desc"
             value={desc}
@@ -147,7 +147,7 @@ function EditBlogForm() {
             </label>
           </div>
           <input
-            className=" bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[50%] rounded outline-none"
+            className=" bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[50%] rounded outline-none"
             type="date"
             name="date"
             value={date}
@@ -158,7 +158,7 @@ function EditBlogForm() {
         {spinner2 && <div className="loading"></div>}
         {title && image && date && desc ? (
           <button
-            className="bg-[#86efac] pl-3 py-2  w-[50%] rounded font-bold mt-8 tracking-wider text-zinc-900"
+            className="bg-[#86efac] px-3 py-2  w-[50%] rounded font-bold mt-8 tracking-wider text-zinc-900"
             onClick={updatePost2}
           >
             SUBMIT
@@ -167,7 +167,7 @@ function EditBlogForm() {
           <button
             type="button"
             disabled
-            className="cursor-not-allowed bg-[#86efac] opacity-50 pl-3 py-2  w-[50%] rounded font-bold mt-8 tracking-wider text-zinc-900"
+            className="cursor-not-allowed bg-[#86efac] opacity-50 px-3 py-2  w-[50%] rounded font-bold mt-8 tracking-wider text-zinc-900"
             onClick={updatePost2}
           >
             SUBMIT

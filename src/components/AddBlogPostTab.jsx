@@ -77,7 +77,7 @@ function AddBlogPostTab() {
             Title
           </label>
           <input
-            className=" bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[100%] rounded outline-none"
+            className=" bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[100%] rounded outline-none"
             name="title"
             value={title}
             onChange={onChangeHandler}
@@ -93,7 +93,7 @@ function AddBlogPostTab() {
             Image URL
           </label>
           <input
-            className=" bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[100%] rounded outline-none"
+            className=" bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[100%] rounded outline-none"
             name="image"
             value={image}
             onChange={onChangeHandler}
@@ -109,7 +109,7 @@ function AddBlogPostTab() {
             Description
           </label>
           <textarea
-            className="resize-none bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[100%] rounded outline-none"
+            className="resize-none bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[100%] rounded outline-none"
             rows={10}
             name="desc"
             value={desc}
@@ -128,7 +128,7 @@ function AddBlogPostTab() {
             </label>
           </div>
           <input
-            className=" bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[50%] rounded outline-none"
+            className=" bg-white border-2 border-zinc-300 text-gray-700 px-3 py-2 mt-2 w-[50%] rounded outline-none"
             type="date"
             name="date"
             value={date}
