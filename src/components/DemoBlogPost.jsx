@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { RiShareLine } from "react-icons/ri";
-import myGlobalContext from "../context";
+
 import { RWebShare } from "react-web-share";
 import { Link } from "react-router-dom";
 

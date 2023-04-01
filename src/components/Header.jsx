@@ -100,7 +100,7 @@ const Header = () => {
               </Link>
             </li>
             <li className=" md:inline mr-6 mt-2 lg:mt-0 hover:text-indigo-400">
-              <Link to="/AdminDashboard">
+              <Link to="/AdminDashboard" >
                 <div className={`${page === "adminDashboard"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2`}>
                   <RiDashboard2Line className="text-white" size={25} />
                   <div>
@@ -111,7 +111,7 @@ const Header = () => {
             </li>
 
             <li className=" hover:text-indigo-400 md:inline mr-6 mt-2 lg:mt-0 ">
-              <Link to="/Store">
+              <Link to="/Store" >
                 <div className={`${page === "store"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2`}>
                   <BiStore className="text-white" size={25} />
                   <div>

@@ -1,9 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import Modal from "../components/Modal";
-import AddBlogPostTab from "../components/AddBlogPostTab";
 import PostComponent from "../components/PostComponent";
-import EditPostModal from "../components/EditPostModal";
-import EditBlogForm from "../components/EditBlogForm";
 import myGlobalContext from "../context";
 
 
@@ -43,13 +39,6 @@ function Home() {
       >
         <div className="w-full h-[700px] md:h-[600px] bg-[rgba(0,0,0,0.3)]"></div>
       </div>
-      {/* <EditPostModal>
-        <EditBlogForm />
-      </EditPostModal>
-
-      <Modal>
-        <AddBlogPostTab />
-      </Modal> */}
 
       <PostComponent />
     </div>
