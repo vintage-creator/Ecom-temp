@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 
-// import myGlobalContext from "../context";
+
 const DemoBlogDetails = () => {
   const { myId2 } = useParams();
 
-  //   const { detailPageID } = useContext(myGlobalContext);
+
 
   const [isOverflow, setIsOverflow] = useState("");
   const descDiv = useRef(null);

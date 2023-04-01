@@ -1,5 +1,4 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
-import { FiMinimize2 } from "react-icons/fi";
 import myGlobalContext from "../context";
 const SideMenu = () => {
 

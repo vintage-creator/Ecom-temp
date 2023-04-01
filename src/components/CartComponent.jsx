@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { AiFillMinusSquare, AiFillPlusSquare } from "react-icons/ai";
 import { FiMinimize2 } from "react-icons/fi";
 import { MdDeleteForever } from "react-icons/md";
