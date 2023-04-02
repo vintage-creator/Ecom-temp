@@ -5,10 +5,12 @@ import AdminDashboard from './screens/AdminDashboard';
 import Layout from './components/Layout';
 import BlogDetailPage from './screens/BlogDetailPage';
 import DemoBlogDetails from './screens/DemoBlogDetails';
+import { ScrollToTop } from 'react-router-scroll-to-top';
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
