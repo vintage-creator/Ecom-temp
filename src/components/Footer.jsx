@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { 
   TfiTwitter,
   TfiFacebook,
@@ -7,10 +7,18 @@ import {
   TfiYoutube
  } from "react-icons/tfi";
 import * as Icons from "@heroicons/react/24/outline";
+import myGlobalContext from "../context";
 const Footer = () => {
+  const {
+    page,
+
+  } = useContext(myGlobalContext);
+
   return (
     <>
-      <div>
+
+    {
+   page !== "Signup" && page !== "Login" &&  <div>
         <div className="border-b-[1px] border-gray-600 py-4 px-4 md:px-40 md:py-4 bg-[#1e2f3b] lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center space-x-2">
             <Icons.PaperAirplaneIcon className="h-5 w-5 text-white" />
@@ -114,6 +122,7 @@ const Footer = () => {
           </footer>
         </div>
       </div>
+      }
     </>
   );
 };
