@@ -129,7 +129,7 @@ const Provider = ({ children }) => {
   });
 
   const getPostData = useCallback(() => {
-    const { id, title, image, desc, date } = postID;
+    const { title, image, desc, date } = postID;
     setUserData2({
       title: `${title}`,
       image: `${image}`,

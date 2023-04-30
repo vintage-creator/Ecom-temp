@@ -6,15 +6,19 @@ import { RiDashboard2Line } from "react-icons/ri";
 import { CgMenuLeft } from "react-icons/cg";
 import * as Icons from "@heroicons/react/24/outline";
 import myGlobalContext from "../context";
-
+import { useNavigate } from "react-router-dom";
 // import { NavLink, Link } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   const {
     page,
     setRunme,
     setCartOpen,
     totalQty,subTotal,roundNum
   } = useContext(myGlobalContext);
+
+
+  const [signupLoginPan,setSignupLoginPan]=useState(false)
 
 
   const [visible, setVisible] = useState("hidden");
@@ -36,7 +40,11 @@ const Header = () => {
   console.log(visible1, 1);
   console.log(visible2, 2);
   return (
-    <div className={`${page === "adminDashboard"? "w-full z-20":"w-full fixed z-20"} `}>
+<>
+
+{
+   page !== "Signup" && page !== "Login" &&<div className={`${page === "adminDashboard"? "w-full z-20":"w-full fixed z-20"} `}>
+
       <div className="border-b-[1px] border-gray-800 bg-[#10181f] text-zinc-200 flex-col p-4 justify-between text-[12px] md:py-2 md:px-20 md:flex md:flex-row">
         <div>
           <p>Free Shipping Over $100 & Free Returns</p>
@@ -50,7 +58,38 @@ const Header = () => {
         </div>
       </div>
       <div className="py-4 px-4 md:px-20 md:py-4 bg-[rgb(16,24,31)] lg:flex lg:items-center lg:justify-between">
+{
+  signupLoginPan === true && 
+        <div
+        className="absolute bg-white py-2 px-4 top-12 md:left-32 rounded md:top-3"
+        >
+
+<div className="border-b-2 pb-2 hover:text-[#1b3a559f] cursor-pointer"
+onClick={()=>navigate("Signup")}
+>Signup</div>
+
+
+ <div className="hover:text-[#1b3a559f] cursor-pointer"
+ onClick={()=>navigate("Login")}
+ >Login</div>
+
+        </div>
+}
+     { signupLoginPan === true ? <div className="rounded-full bg-[#1b3a559f] hover:bg-[#1b3a559f] p-[1px] h-12 w-12 flex justify-center items-center"
+      onClick={()=>{
+        setSignupLoginPan(prev => !prev)
+      }}
+      >
       <Icons.UserCircleIcon className="h-10 w-10 text-white" />
+      </div>:
+      <div className="rounded-full hover:bg-[#1b3a559f] p-[1px] h-12 w-12 flex justify-center items-center"
+      onClick={()=>{
+        setSignupLoginPan(prev => !prev)
+      }}
+      >
+      <Icons.UserCircleIcon className="h-10 w-10 text-white" />
+      </div>
+      }
         <div className="flex items-center justify-between space-x-6 my-3">
 {
   page !== "adminDashboard"  &&      <div className=" w-[70vw] flex rounded bg-white overflow-hidden justify-between  md:w-[25vw] md:min-w-[300px] ">
@@ -63,6 +102,7 @@ const Header = () => {
   </div>
 </div>
 }
+
 
 <div >
 <CgMenuLeft
@@ -143,6 +183,8 @@ const Header = () => {
       </div>
       <div></div>
     </div>
+              }
+</>
   );
 };
 
