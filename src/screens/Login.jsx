@@ -3,11 +3,21 @@ import { Link, useNavigate } from "react-router-dom";
 import myGlobalContext from "../context";
 
 import { BiHomeSmile} from "react-icons/bi";
+import axios from 'axios';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { Spinner } from "react-activity";
+import "react-activity/dist/library.css";
 function Login() {
 
+
+
+  const [activityIndicator,setActivityIndicator]=useState(false)
+const [btnColor,setBtnColor]=useState("#10181f")
+const [btnDisabled,setBtnDisabled]=useState(false)
 const [userInput, setUserInput]=useState({
-  firstName:"",
-  lastName:"",
   email:"",
   password:"",
 })
@@ -16,6 +26,33 @@ const { email,password } = userInput
 // console.log(Object.keys(userInput),"chima")
 const loginURL = "http://localhost:1337/api/auth/local"
 
+const loginUser = async ()=>{
+try{
+  setActivityIndicator(true)
+  setBtnColor("#1b3a559f")
+  setBtnDisabled(true)
+
+  const res = await axios.post(loginURL,{
+    identifier:email,
+    password:password
+  })
+  console.log(res)
+  setUserInput({
+    email:"",
+    password:"",
+  })
+  toast.success("Login successful")
+}
+catch(err){
+console.log(err.message)
+toast.error("Something went wrong")
+}
+finally{
+  setActivityIndicator(false)
+    setBtnColor("#10181f")
+    setBtnDisabled(false)
+}
+}
 const onChangeHandler = (e)=>{
   const {value, name} = e.target
   setUserInput({
@@ -52,6 +89,9 @@ className='h-6 w-6   text-zinc-800 hover:bg-white hover:text-zinc-800'
 />
 </div>
 </Link>
+<ToastContainer
+autoClose={2000}
+/>
 {/* <div className='w-12 h12 flex items-center justify-center'>
 
 </div> */}
@@ -85,13 +125,26 @@ className='bg-dark font-bold text-2xl tracking-wider'
   name="password"
   onChange={onChangeHandler}
   />
+ 
+
+
+
+
+<div className=' w-[95%] mt-4 relative'>
 <input type="button"  id=""
   value='Login'
-
- 
-  className='w-[95%] mt-4 h-12  border-[2px] rounded px-2 font-bold tracking-wider bg-[#10181f] text-white hover:bg-[#1b3a559f]'
+  disabled = {btnDisabled}
+  onClick={loginUser}
+  className={` w-full h-12  border-[2px] rounded  font-bold tracking-wider 
+  bg-[${btnColor}] text-white hover:bg-[#1b3a559f]`}
   
   /> 
+  <Spinner
+  animating={activityIndicator}
+  // color='blue'
+  style={{position:"absolute",top:"25%", right:"45%"}}
+  /> 
+</div> 
 
 <Link to="/Signup">
 <p

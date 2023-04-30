@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BiHomeSmile} from "react-icons/bi";
 import axios from "axios";
 
-import { render } from "react-dom";
 
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
@@ -71,7 +70,7 @@ const registerUser = async ()=>{
       email:"",
       password:"",
     })
-    toast.success("Login successful")
+    toast.success("Sign up successful")
   }
   catch(error){
 console.log(error.message)
@@ -95,10 +94,11 @@ className='h-6 w-6   text-zinc-800 hover:bg-white hover:text-zinc-800'
 
 />
 </div>
+
+</Link>
 <ToastContainer
 autoClose={2000}
 />
-</Link>
 {/* <div className='w-12 h12 flex bg-red-700 items-center justify-center'>
 
 </div> */}
