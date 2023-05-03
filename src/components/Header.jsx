@@ -18,7 +18,7 @@ const Header = () => {
   } = useContext(myGlobalContext);
 
 
-  const [signupLoginPan,setSignupLoginPan]=useState(false)
+  const [signupLoginPan,setSignupLoginPan]=useState(true)
 
 
   const [visible, setVisible] = useState("hidden");
