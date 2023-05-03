@@ -5,14 +5,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BiHomeSmile} from "react-icons/bi";
 import axios from "axios";
-
+import { useNavigate } from 'react-router-dom';
 
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
 
 
 function Signup() {
-  
+  const navigate = useNavigate()
+
 const [activityIndicator,setActivityIndicator]=useState(false)
 const [btnColor,setBtnColor]=useState("#10181f")
 const [btnDisabled,setBtnDisabled]=useState(false)
@@ -58,7 +59,8 @@ const registerUser = async ()=>{
     setBtnColor("#1b3a559f")
     setBtnDisabled(true)
     const res = await axios.post(registerURL,{
-  username:firstName,
+  username:"notrequired",
+  firstName:firstName,
   email:email,
   password:password,
   lastname:lastName,
@@ -71,6 +73,8 @@ const registerUser = async ()=>{
       password:"",
     })
     toast.success("Sign up successful")
+    setTimeout(()=> navigate("/Login"),3000)
+
   }
   catch(error){
 console.log(error.message)

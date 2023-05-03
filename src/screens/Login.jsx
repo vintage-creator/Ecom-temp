@@ -10,10 +10,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
+
 function Login() {
 
 
-
+  const navigate = useNavigate();
   const [activityIndicator,setActivityIndicator]=useState(false)
 const [btnColor,setBtnColor]=useState("#10181f")
 const [btnDisabled,setBtnDisabled]=useState(false)
@@ -42,6 +43,7 @@ try{
     password:"",
   })
   toast.success("Login successful")
+  setTimeout(()=> navigate("/"), 3000)
 }
 catch(err){
 console.log(err.message)
@@ -77,7 +79,7 @@ const onChangeHandler = (e)=>{
   });
 
 
-  const navigate = useNavigate();
+  
   console.log(navigate)
   return (
 <>
