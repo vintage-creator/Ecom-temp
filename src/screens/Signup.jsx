@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BiHomeSmile} from "react-icons/bi";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import { v4 as UUID } from 'uuid';
 
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
@@ -59,7 +60,7 @@ const registerUser = async ()=>{
     setBtnColor("#1b3a559f")
     setBtnDisabled(true)
     const res = await axios.post(registerURL,{
-  username:"notrequired",
+  username:UUID().toString()+firstName,
   firstName:firstName,
   email:email,
   password:password,
@@ -78,7 +79,7 @@ const registerUser = async ()=>{
   }
   catch(error){
 console.log(error.message)
-toast.error("Something went wrong")
+toast.error("Something went wrong, possible cause: server not hosted globally for now")
   }
   finally{
 

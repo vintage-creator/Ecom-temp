@@ -14,11 +14,11 @@ const Header = () => {
     page,
     setRunme,
     setCartOpen,
-    totalQty,subTotal,roundNum
+    totalQty,subTotal,roundNum,signupLoginPan,setSignupLoginPan
   } = useContext(myGlobalContext);
 
 
-  const [signupLoginPan,setSignupLoginPan]=useState(true)
+
 
 
   const [visible, setVisible] = useState("hidden");
