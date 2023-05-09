@@ -10,10 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
-
+import STRAPI_BASEURL from "../config";
 
 function Login() {
-  const {  setSignupLoginPan, setPage } = useContext(myGlobalContext);
+  console.log(STRAPI_BASEURL, "chima203");
+  const { setSignupLoginPan, setPage } = useContext(myGlobalContext);
   const navigate = useNavigate();
   const [activityIndicator, setActivityIndicator] = useState(false);
   const [btnColor, setBtnColor] = useState("#10181f");
@@ -25,7 +26,7 @@ function Login() {
 
   const { email, password } = userInput;
   // console.log(Object.keys(userInput),"chima")
-  const loginURL = "http://localhost:1337/api/auth/local";
+  const loginURL = `${STRAPI_BASEURL}/api/auth/local`;
 
   const loginUser = async () => {
     try {
@@ -43,12 +44,13 @@ function Login() {
         password: "",
       });
       toast.success("Login successful");
-      setSignupLoginPan(false)
+      setSignupLoginPan(false);
       setTimeout(() => navigate("/"), 3000);
-
     } catch (err) {
       console.log(err.message);
-      toast.error("Something went wrong, possible cause: server not hosted globally for now");
+      toast.error(
+        "Something went wrong, possible cause: server not hosted globally for now"
+      );
     } finally {
       setActivityIndicator(false);
       setBtnColor("#10181f");
@@ -66,8 +68,6 @@ function Login() {
       [name]: value,
     });
   };
-
-
 
   const pageName = () => {
     setPage("Login");
