@@ -19,22 +19,6 @@ const Footer = () => {
 
     {
    page !== "Signup" && page !== "Login" &&  <div>
-        <div className="border-b-[1px] border-gray-600 py-4 px-4 md:px-40 md:py-4 bg-[#1e2f3b] lg:flex lg:items-center lg:justify-between">
-          <div className="flex items-center space-x-2">
-            <Icons.PaperAirplaneIcon className="h-5 w-5 text-white" />
-            <p className="text-lg  text-white mr-4">Signup For News Letter</p>
-          </div>
-
-          <div className="mt-3 w-[70vw] flex rounded bg-white  justify-between  lg:mt-0 md:w-[30vw] md:min-w-[400px]  overflow-hidden">
-            <input
-              placeholder="Search me"
-              className="py-[5px] rounded outline-none px-6 text-zinc-500 w-[50vw] md:w-[33vw]"
-            />
-            <div className="bg-green-600 flex items-center justify-center px-4 min-w-[60px] cursor-pointer text-white">
-              Subscribe
-            </div>
-          </div>
-        </div>
 
         <div className="bg-[#1e2f3b]">
           <footer className="w-full bg-[#1e2f3b] p-8">
@@ -114,8 +98,7 @@ const Footer = () => {
 
             <div className="md:flex md:items-center md:mt-14 md:justify-start">
               <p className="text-zinc-500 my-8">
-                Copyright ©2023 All rights reserved | Ecommerce and Blog made with
-                &#128420; by <span className="text-green-600">Chima</span>
+              Perfect Computer Technologies. © Copyright 2023, All rights reserved.
               </p>
     
             </div>

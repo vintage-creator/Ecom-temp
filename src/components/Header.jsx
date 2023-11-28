@@ -2,9 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineClose } from "react-icons/md";
 import { BiHomeSmile, BiStore, BiCartAlt } from "react-icons/bi";
-import { RiDashboard2Line } from "react-icons/ri";
 import { CgMenuLeft } from "react-icons/cg";
-import * as Icons from "@heroicons/react/24/outline";
 import myGlobalContext from "../context";
 import { useNavigate } from "react-router-dom";
 // import { NavLink, Link } from "react-router-dom";
@@ -14,7 +12,7 @@ const Header = () => {
     page,
     setRunme,
     setCartOpen,
-    totalQty,subTotal,roundNum,signupLoginPan,setSignupLoginPan
+    totalQty,subTotal,roundNum
   } = useContext(myGlobalContext);
 
 
@@ -47,62 +45,34 @@ const Header = () => {
 
       <div className="border-b-[1px] border-gray-800 bg-[#10181f] text-zinc-200 flex-col p-4 justify-between text-[12px] md:py-2 md:px-20 md:flex md:flex-row">
         <div>
-          <p>Free Shipping Over $100 & Free Returns</p>
+          <p>Free Shipping for Items Over ₦900,000</p>
         </div>
         <div className="md:flex md:space-x-2">
           <p>
-            Hotline: <a href="tel:+2349091793058">+2349091793058</a>
+            Hotline: <a href="tel:+2347033251356">+2347033251356</a>
           </p>
           <div>English</div>
-          <div>USD $</div>
+          <div>NGN ₦</div>
         </div>
       </div>
       <div className="py-4 px-4 md:px-20 md:py-4 bg-[rgb(16,24,31)] lg:flex lg:items-center lg:justify-between">
-{
-  signupLoginPan === true && 
-        <div
-        className="absolute bg-white py-2 px-4 top-12 md:left-32 rounded md:top-3"
-        >
+      <img
+      src="/myImages/WhatsApp Image 2023-11-21 at 15.27.29_b314695b (1).png"
+      alt="Logo"
+      className="h-10 w-10 lg:h-12 lg:w-12"
+    /><span className="text-white ml-[-30.5px]"><b>Perfect Computers</b></span>
 
-<div className="border-b-2 pb-2 hover:text-[#1b3a559f] cursor-pointer"
-onClick={()=>navigate("Signup")}
->Signup</div>
-
-
- <div className="hover:text-[#1b3a559f] cursor-pointer"
- onClick={()=>navigate("Login")}
- >Login</div>
-
-        </div>
-}
-     { signupLoginPan === true ? <div className="rounded-full bg-[#1b3a559f] hover:bg-[#1b3a559f] p-[1px] h-12 w-12 flex justify-center items-center"
-      onClick={()=>{
-        setSignupLoginPan(prev => !prev)
-      }}
-      >
-      <Icons.UserCircleIcon className="h-10 w-10 text-white" />
-      </div>:
-      <div className="rounded-full hover:bg-[#1b3a559f] p-[1px] h-12 w-12 flex justify-center items-center"
-      onClick={()=>{
-        setSignupLoginPan(prev => !prev)
-      }}
-      >
-      <Icons.UserCircleIcon className="h-10 w-10 text-white" />
-      </div>
-      }
         <div className="flex items-center justify-between space-x-6 my-3">
-{
-  page !== "adminDashboard"  &&      <div className=" w-[70vw] flex rounded bg-white overflow-hidden justify-between  md:w-[25vw] md:min-w-[300px] ">
-  <input
-    placeholder="Search me"
-    className="py-[5px] rounded outline-none px-6 text-zinc-500 w-[60vw] md:w-[33vw]"
-  />
-  <div className="bg-yellow-500 flex items-center justify-center w-[50px] cursor-pointer">
-    <Icons.MagnifyingGlassIcon className="h-5 w-5 text-white" />
-  </div>
-</div>
-}
 
+        <div className="mt-3 w-[70vw] flex rounded bg-white  justify-between  lg:mt-0 md:w-[30vw] md:min-w-[400px]  overflow-hidden">
+            <input
+              placeholder="Search your perfect computer"
+              className="py-[5px] rounded outline-none px-6 text-zinc-500 w-[50vw] md:w-[33vw]"
+            />
+            <div className="bg-green-600 flex items-center justify-center px-4 min-w-[60px] cursor-pointer text-white">
+              Search
+            </div>
+          </div>
 
 <div >
 <CgMenuLeft
@@ -139,32 +109,11 @@ onClick={()=>navigate("Signup")}
              
               </Link>
             </li>
-            <li className=" md:inline mr-6 mt-2 lg:mt-0 hover:text-indigo-400">
-              <Link to="/AdminDashboard" >
-                <div className={`${page === "adminDashboard"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2`}>
-                  <RiDashboard2Line className="text-white" size={25} />
-                  <div>
-                    <p className="hover:text-indigo-400">Dashboard</p>
-                  </div>
-                </div>
-              </Link>
-            </li>
-
-            <li className=" hover:text-indigo-400 md:inline mr-6 mt-2 lg:mt-0 ">
-              <Link to="/Store" >
-                <div className={`${page === "store"? "bg-[#1b3a559f] p-2 rounded":"text-white"} flex items-center space-x-2 mt-2`}>
-                  <BiStore className="text-white" size={25} />
-                  <div>
-                    <p className="hover:text-indigo-400">Store</p>
-                  </div>
-                </div>
-              </Link>
-            </li>
             <li className=" md:inline mr-4 mt-2 lg:mt-0 ">
               <div
                 className="flex items-center space-x-2 cursor-pointer"
                 onClick={() => {
-                  page === "store"? setCartOpen(true):setCartOpen(false);
+                  page === "home"? setCartOpen(true):setCartOpen(false);
                   setRunme((prev) => !prev);
                 }}
               >

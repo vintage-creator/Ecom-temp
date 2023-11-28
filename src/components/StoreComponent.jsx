@@ -7,216 +7,263 @@ const allBooks = [
   {
     quantity: 0,
     id: 1,
-    title: "The DevOps Handbook",
+    title: "The HP ZBOOK",
     image:
-      "https://d2befjeb7j9tii.cloudfront.net/upload/images/large/11428743.jpg",
-    price: 23.98,
-    author: "Gene Kim",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701129571/WhatsApp_Image_2023-11-22_at_08.57.05_33416a55_lf39a8.jpg",
+    price: 330000,
+    seller: "Perfect Computers",
     description:
-      "This book is a comprehensive guide to implementing DevOps principles in organizations of all sizes. Kim provides practical advice on how to streamline software delivery, increase agility, and improve collaboration between development and operations teams.",
+      "The HP ZBOOK 15 G3 is a powerful laptop featuring an Intel Core i7 processor, 256GB storage, 8GB RAM, and a 4GB dedicated NVIDIA graphics card. This high-performance device is designed to meet the demands of professional users, offering robust computing capabilities and efficient multitasking.",
     preview:
-      "In this book, Kim covers topics such as continuous integration and deployment, infrastructure as code, and monitoring and logging. He provides case studies from companies like Google, Amazon, and Netflix, and explains how they have successfully implemented DevOps practices.",
+      "Explore the capabilities of the HP ZBOOK 15 G3, equipped with an Intel Core i7 processor, 256GB storage, and 8GB RAM. The inclusion of a 4GB dedicated NVIDIA graphics card ensures smooth graphics performance, making it an ideal choice for professionals in need of reliable computing power.",
   },
   {
     quantity: 0,
     id: 2,
-    title: "Effective Java",
+    title: "HP Elitebook 840 G3",
     image:
-      "https://m.media-amazon.com/images/P/0134685997.01._SCLZZZZZZZ_SX500_.jpg",
-    price: 33.99,
-    author: "Joshua Bloch",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701133564/WhatsApp_Image_2023-11-22_at_08.58.49_f7cd9751_eu1vvb.jpg",
+    price: 165000,
+    seller: "Perfect Computers",
     description:
-      "This book is a guide to writing effective and efficient Java code. Bloch provides practical advice on how to use Java features, libraries, and patterns to write code that is easy to maintain, extend, and debug.",
+      "The HP Elitebook 840 G3 6th Gen is a sleek and efficient laptop featuring an Intel Core i5 processor, 256GB storage, and 8GB RAM. With its portable design and reliable performance, this laptop is an excellent choice for professionals seeking a balance between power and mobility.",
     preview:
-      "In this book, Bloch covers topics such as object creation, classes and interfaces, lambda expressions, and streams. He provides examples of good and bad Java code and explains how to use Java libraries and frameworks like Spring and Hibernate.",
+      "Experience the power of the 6th Gen Intel Core i5 processor in the HP Elitebook 840 G3. Boasting 256GB storage, 8GB RAM, and a price point of ₦165K, this laptop offers a seamless blend of performance and affordability, making it an ideal companion for on-the-go professionals.",
   },
   {
     quantity: 0,
     id: 3,
-    title: "Head First Design Patterns",
+    title: "HP Elitebook 840 G2",
     image:
-      "https://m.media-amazon.com/images/P/B08P3X99QP.01._SCLZZZZZZZ_SX500_.jpg",
-    price: 47.99,
-    author: "Eric Freeman",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701133600/WhatsApp_Image_2023-11-22_at_08.58.47_ba1987e4_in0nsg.jpg",
+    price: 140000,
+    seller: "Perfect Computers",
     description:
-      "This book is a guide to understanding and using design patterns in software development. Freeman provides practical advice on how to apply patterns to create flexible, reusable, and maintainable software.",
+      "The HP Elitebook 840 G2 5th Gen is a versatile laptop featuring an Intel Core i5 processor, 500GB storage, and 4GB RAM. Equipped with a convenient keyboard light, this laptop offers a balance of performance and functionality at a competitive price of ₦140K.",
     preview:
-      "In this book, Freeman covers patterns such as Singleton, Factory Method, Decorator, and Observer. He provides examples of good and bad design and explains how to use design patterns in Java, C++, and C#.",
+      "Enhance your computing experience with the HP Elitebook 840 G2 5th Gen. With its powerful Intel Core i5 processor, ample 500GB storage, and 4GB RAM, this laptop is designed for both efficiency and convenience. The added keyboard light feature further elevates its usability, making it a smart choice for users seeking a reliable and feature-rich device.",
   },
   {
     quantity: 0,
     id: 4,
-    title: "The Art of Computer Programming",
+    title: "HP Elitebook 830 G5",
     image:
-      "https://m.media-amazon.com/images/I/410vJZbAZGS._SY393_BO1,204,203,200_.jpg",
-    price: 206.99,
-    author: "Donald E. Knuth",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701133787/WhatsApp_Image_2023-11-22_at_08.58.47_778c6b8d_ztlwm4.jpg",
+    price: 250000,
+    seller: "Perfect Computers",
     description:
-      "This book is a comprehensive guide to computer programming and algorithms. Knuth provides practical advice on how to design and analyze algorithms, and how to implement them efficiently in computer programs.",
+      "The HP Elitebook 830 G5 8th Gen is a high-performance laptop powered by an Intel Core i5 processor, featuring a 256GB storage capacity and 8GB of RAM. With a sleek design and robust specifications, this laptop is priced at ₦250K, offering a compelling blend of power and portability.",
     preview:
-      "In this book, Knuth covers topics such as fundamental algorithms, sorting and searching, combinatorial algorithms, and graph algorithms. He provides examples of algorithms in several programming languages, including Pascal, C, and assembly language.",
+      "Experience seamless productivity with the HP Elitebook 830 G5 8th Gen. This laptop, driven by an Intel Core i5 processor, boasts a generous 256GB storage and 8GB RAM. Its stylish design and powerful specifications make it a reliable companion for users seeking a balance between performance and mobility. Priced at ₦250K, it delivers exceptional value for those in search of a premium computing experience.",
   },
   {
     quantity: 0,
     id: 5,
-    title: "The Phoenix Project",
-    image: "https://m.media-amazon.com/images/I/51Fi5Fq4u5L.jpg",
-    price: "$12.00",
-    author: "Gene Kim, Kevin Behr, George Spafford",
+    title: "HP Elitebook folio 1040 G3",
+    image: "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701134014/WhatsApp_Image_2023-11-22_at_08.58.48_7fd84008_xgda5h.jpg",
+    price: 215000,
+    seller: "Perfect Computers",
     description:
-      "The Phoenix Project is a novel that tells the story of a fictional company that is struggling to survive in the face of intense competition and technological disruption. Through the eyes of the main character, we see how the company's IT department is able to transform itself from a liability into a strategic asset.",
+      "The HP Elitebook Folio 1040 G3 6th Gen is a sophisticated laptop featuring an Intel Core i7 processor, 256GB storage, and 8GB of RAM. With an added keyboard light for enhanced visibility, this laptop is priced at ₦215K, offering a powerful computing experience with a touch of elegance.",
     preview:
-      "The Phoenix Project is a great book for anyone who wants to learn more about IT management, DevOps, and the principles of agile development. It's a fun read that provides valuable insights into the challenges that modern businesses face, and how they can overcome them with the right approach.",
+      "Elevate your computing experience with the HP Elitebook Folio 1040 G3 6th Gen. Powered by an Intel Core i7 processor, this laptop delivers robust performance with a spacious 256GB storage and 8GB RAM. The inclusion of a keyboard light enhances usability in various environments.",
   },
   {
     quantity: 0,
     id: 6,
-    title: "Clean Code",
+    title: "Lenovo X230i",
     image:
-      "https://m.media-amazon.com/images/I/41xShlnTZTL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
-    price: 33.71,
-    author: "Robert C. Martin",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701134852/WhatsApp_Image_2023-11-22_at_08.58.48_56d634ab_fcc0af.jpg",
+    price: 100000,
+    seller: "Perfect Computers",
     description:
-      "This book is a guide to writing clean, maintainable code. Martin provides guidelines and best practices for writing code that is easy to read and modify, and that will stand the test of time.",
+      "The Lenovo X230i is a reliable laptop equipped with an Intel Core i3 processor, 500GB storage, and 4GB of RAM. Priced at ₦100K, this laptop offers a balance of performance and affordability, making it a suitable choice for everyday computing needs.",
     preview:
-      "In this book, Martin provides practical advice on writing code that is easy to understand and modify. He covers topics such as naming conventions, formatting, and error handling, and provides examples of both good and bad code. The book also includes case studies and examples from real-world projects.",
+      "Experience dependable computing with the Lenovo X230i. Powered by an Intel Core i3 processor, this laptop provides smooth performance, backed by a generous 500GB storage and 4GB RAM. With a reasonable price tag of ₦100K, it's an excellent option for users seeking a budget-friendly yet capable device for their daily tasks.",
   },
   {
     quantity: 0,
     id: 7,
-    title: "The Pragmatic Programmer: Your Journey To Mastery",
-    image: "https://m.media-amazon.com/images/I/51IA4hT6jrL.jpg",
-    price: 24.6,
-    author: "David Thomas, Andrew Hunt",
+    title: "Lenovo Thinkpad X250",
+    image: "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701147688/Lenovo_thinkpad_x250_q9apfr.jpg",
+    price: 130000,
+    seller: "Perfect Computers",
     description:
-      "This book provides tips and techniques on how to improve your programming skills, from managing complexity to writing code that is easy to maintain.",
+      "The Lenovo ThinkPad X250 is a versatile laptop featuring an Intel Core i5 processor, 500GB storage, and 4GB of RAM. Priced at ₦130K, it combines reliable performance with a portable design, making it suitable for professionals and students alike.",
     preview:
-      "https://www.amazon.com/Pragmatic-Programmer-Journey-Mastery/dp/0135957052",
+      "Enhance your productivity with the Lenovo ThinkPad X250. Powered by an Intel Core i5 processor, this laptop offers a balance of power and efficiency. With a spacious 500GB storage and 4GB RAM, it's equipped to handle your computing needs.",
   },
   {
     quantity: 0,
     id: 8,
-    title: "Code Complete: A Practical Handbook of Software Construction",
+    title: "HP Elitebook 840 G5",
     image:
-      "https://m.media-amazon.com/images/I/51IM3Ywr1yL._SX397_BO1,204,203,200_.jpg",
-    price: 37.49,
-    author: "Steve McConnell",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701147966/WhatsApp_Image_2023-11-22_at_08.58.48_9cd9741f_esarek.jpg",
+    price: 210000,
+    seller: "Perfect Computers",
     description:
-      "This book provides a comprehensive guide to software construction, including design, coding, debugging, and testing.",
+      "The HP EliteBook 840 G5, 7th Gen, is a powerful laptop with an Intel Core i5 processor, 256GB storage, and 8GB of RAM. It features a keyboard light for enhanced usability and is priced at ₦210K, making it a compelling choice for users seeking performance and functionality.",
     preview:
-      "https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670",
+      "Experience the robust performance of the HP EliteBook 840 G5, 7th Gen, equipped with an Intel Core i5 processor. With a generous 256GB storage and 8GB RAM, this laptop ensures seamless multitasking and efficient storage. The added convenience of a keyboard light enhances usability in various environments.",
   },
   {
     quantity: 0,
     id: 9,
     title:
-      "Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems",
+      "HP Elitebook 840 G4",
     image:
-      "https://m.media-amazon.com/images/P/1449373321.01._SCLZZZZZZZ_SX500_.jpg",
-    price: 40.33,
-    author: "Martin Kleppmann",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701148252/WhatsApp_Image_2023-11-22_at_08.58.49_d2558902_f2y8tp.jpg",
+    price: 190000,
+    seller: "Perfect Computers",
     description:
-      "This book explores the principles and techniques for designing and building large-scale, data-intensive applications.",
+      "The HP EliteBook 840 G4, 7th Gen, is a sophisticated laptop featuring an Intel Core i5 processor, 256GB storage, and 8GB of RAM. With a sleek design and powerful specifications, this laptop is priced at ₦190K, making it an attractive choice for users seeking a blend of style and performance.",
     preview:
-      "https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321",
+      "Discover the elegance and power of the HP EliteBook 840 G4, 7th Gen. Driven by an Intel Core i5 processor, this laptop ensures smooth and efficient performance. The spacious 256GB storage and 8GB RAM offer ample space for files and seamless multitasking. ",
   },
   {
     quantity: 0,
     id: 10,
-    title: "The Clean Coder: A Code of Conduct for Professional Programmers",
-    image: "https://m.media-amazon.com/images/I/51VzkJGKrjL.jpg",
-    price: 25.75,
-    author: "Robert C. Martin",
+    title: "The HP 15",
+    image: "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162415/WhatsApp_Image_2023-11-28_at_05.45.50_dcaf8379_qdmtei.jpg",
+    price: "Call: 07033251356",
+    seller: "Perfect Computers",
     description:
-      "This book provides guidance on how to be a professional programmer, including topics such as time management, teamwork, and communication.",
+      "Experience powerful performance and intuitive computing with the HP 15 Touchscreen Laptop. Featuring an Intel Core i5 processor, 12GB RAM, and a spacious 1TB HDD, this laptop delivers seamless multitasking and ample storage for your files. The responsive touchscreen and Windows 10 provide a user-friendly interface for enhanced productivity and entertainment.",
     preview:
-      "https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073",
+      "HP 15 Touchscreen Laptop with Intel Core i5, 10th Gen, 12GB RAM, and 1TB HDD. Explore a responsive touchscreen experience and enjoy powerful computing on Windows 10. Ideal for multitasking and storing all your files.",
   },
   {
     quantity: 0,
     id: 11,
-    title: "The Mythical Man-Month: Essays on Software Engineering",
+    title: "PS5 Consoles",
     image:
-      "https://m.media-amazon.com/images/P/B00B8USS14.01._SCLZZZZZZZ_SX500_.jpg",
-    price: 21.0,
-    author: "Frederick P. Brooks Jr.",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162440/WhatsApp_Image_2023-11-28_at_05.45.02_be116cd3_doeuge.jpg",
+    price: "Call: 07033251356",
+    seller: "Perfect Computers",
     description:
-      "This book explores the challenges of managing large software projects, including topics such as project estimation, scheduling, and communication.",
+      "Immerse yourself in the next generation of gaming with the Sony Playstation 5 Standard Edition Console. Experience stunning graphics, lightning-fast loading times, and innovative features that redefine gaming. This console delivers powerful performance, a sleek design, and a vast library of games for an unparalleled gaming experience.",
     preview:
-      "https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959",
+      "Sony Playstation 5 Standard Edition Console - Unleash the power of next-gen gaming with cutting-edge graphics and lightning-fast performance. Immerse yourself in a sleek design and explore a vast gaming library for an unparalleled gaming adventure.",
   },
   {
     quantity: 0,
     id: 12,
-    title: "The Lean Startup",
-    image: "https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg",
-    price: 28.05,
-    author: "Eric Ries",
+    title: "iPhone 14 Pro 128GB/256GB",
+    image: "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162454/WhatsApp_Image_2023-11-27_at_20.45.28_fb9bbb09_ryyq3a.jpg",
+    price: "Call: 07033251356",
+    seller: "Perfect Computers",
     description:
-      "This book is a guide to building a successful startup. Ries provides practical advice on how to create a product that customers actually want, and how to build a business that is scalable and sustainable.",
+      "Discover the pinnacle of smartphone innovation with the Apple iPhone 14 Pro. This powerful device combines cutting-edge technology, stunning design, and exceptional performance. Capture life's moments with an advanced camera system, enjoy a brilliant display, and experience the seamless integration of iOS for a truly premium mobile experience.",
     preview:
-      "In this book, Ries introduces the concept of the lean startup, which emphasizes rapid iteration and continuous experimentation. He provides practical advice on how to test your assumptions, measure progress, and pivot when necessary. The book also includes case studies and examples from successful startups.",
+      "Experience the epitome of smartphone excellence with expanded storage for all your needs. Enjoy advanced camera capabilities, a stunning display, and the seamless performance of iOS.",
   },
   {
     quantity: 0,
     id: 13,
-    title: "Cracking the PM Interview",
+    title: "iPhone 13 Pro Max 128GB/256GB/512GB",
     image:
-      "https://m.media-amazon.com/images/P/0984782818.01._SCLZZZZZZZ_SX500_.jpg",
-    price: 34.24,
-    author: "Gayle McDowell",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162477/WhatsApp_Image_2023-11-27_at_20.45.17_6cc24f29_mphchf.jpg",
+    price: "Call: 07033251356",
+    seller: "Perfect Computers",
     description:
-      "This book is a comprehensive guide to acing the product management interview. McDowell provides practical advice on how to prepare for the interview, what to expect during the interview, and how to answer common interview questions.",
+      "Unleash the power of technology with the iPhone 13 Pro Max. This flagship device boasts an impressive camera system, stunning display, and powerful performance. Choose from ample storage options to suit your needs and elevate your mobile experience to new heights.",
     preview:
-      "In this book, McDowell covers topics such as product design, technical skills, and behavioral questions. She provides examples of successful interview answers, as well as tips for networking and negotiating job offers.",
+      "Take your smartphone experience to the next level with increased storage capacity. Store more media, apps, and files without compromising on performance.",
   },
   {
     quantity: 0,
     id: 14,
-    title: "Learning Python",
-    image: "https://m.media-amazon.com/images/I/41nRJEUxePS.jpg",
-    price: 30.49,
-    author: "Mark Lutz",
+    title: "iPhone 11 64GB/128GB",
+    image: "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162616/WhatsApp_Image_2023-11-27_at_20.45.08_f7ae73d0_ulcr0n.jpg",
+    price: "Call: 07033251356",
+    seller: "Perfect Computers",
     description:
-      "This book is a comprehensive guide to learning the Python programming language. Lutz provides practical advice on how to write Python code, how to use Python libraries, and how to debug Python programs.",
+      "Discover innovation and performance with the Apple iPhone 11. This iconic device combines cutting-edge features with sleek design. Capture stunning photos, enjoy immersive displays, and experience seamless performance in the palm of your hand.",
     preview:
-      "In this book, Lutz covers topics such as data types, control structures, functions, and classes. He provides examples of Python code and explains how to use Python libraries for scientific computing, web development, and more.",
+      "Elevate your mobile experience with ample storage for apps, photos, and more. Capture memories and stay connected with the power of Apple's renowned technology.",
   },
   {
     quantity: 0,
     id: 15,
-    title: "Site Reliability Engineering",
-    image: "https://m.media-amazon.com/images/I/51XswOmuLqL.jpg",
-    price: 35.99,
-    author: "Niall Richard Murphy",
+    title: "Apple iphone 8/8+ - 64/256GB",
+    image: "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162641/8plus_and_8_glass_back_big.jpg.large_dxvoxq.jpg",
+    price: "Call: 07033251356",
+    seller: "Perfect Computers",
     description:
-      "This book is a guide to building and operating large-scale distributed systems. Murphy provides practical advice on how to design, implement, and manage systems that are reliable, scalable, and efficient.",
+      "Experience timeless elegance and powerful performance with the Apple iPhone 8 and 8+. These iconic smartphones seamlessly blend premium design with advanced features. Enjoy stunning visuals, responsive capabilities, and the reliability of Apple's craftsmanship.",
     preview:
-      "In this book, Murphy covers topics such as monitoring, load balancing, incident response, and capacity planning. He provides case studies from companies like Google, Amazon, and LinkedIn, and explains how they have applied site reliability engineering principles to their systems.",
+      "Unleash the potential of a compact powerhouse. The 64GB and 256GB variants offer ample storage for your essentials, delivering a smooth and responsive user experience for everyday tasks and multimedia enjoyment.",
   },
   {
     quantity: 0,
     id: 16,
-    title: "Learning JavaScript",
+    title: "iphone X/XS/XR/XS Max - 64/128/256/512GB",
     image:
-      "https://m.media-amazon.com/images/P/1491914912.01._SCLZZZZZZZ_SX500_.jpg",
-    price: 39.99,
-    author: "Ethan Brown",
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162668/iphone-x_tbbxsy.png",
+      price: "Call: 07033251356",
+      seller: "Perfect Computers",
     description:
-      "This book is a comprehensive guide to learning the JavaScript programming language. Brown provides practical advice on how to write JavaScript code, how to use JavaScript frameworks, and how to debug JavaScript programs.",
+      "Immerse yourself in the brilliance of Apple innovation with the iPhone X, XS, XR, and XS Max. Crafted with precision and loaded with cutting-edge technology, these iconic iPhones redefine the smartphone experience. Elevate your daily interactions with stunning displays, powerful performance, and an unmatched user interface.",
     preview:
-      "In this book, Brown covers topics such as data types, control structures, functions, and objects. He provides examples of JavaScript code and explains how to use popular JavaScript frameworks like Angular and React.",
+      "Embrace color and performance with these iPhone series. Enjoy the Liquid Retina display, powerful A12 Bionic chip, and a single-lens camera that captures stunning portraits and immersive AR experiences.",
+  },
+  {
+    quantity: 0,
+    id: 17,
+    title: "iphone 12/12 Pro/12 Pro Max - 64/128/256/512GB",
+    image:
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162688/IPhone12-64gb-ss_n6jaky.jpg",
+      price: "Call: 07033251356",
+      seller: "Perfect Computers",
+    description:
+      "Introducing the Apple iPhone 12 series — a masterpiece of design, performance, and innovation. Elevate your smartphone experience with the iPhone 12, 12 Pro, and 12 Pro Max. Immerse yourself in a world of cutting-edge technology, stunning visuals, and unparalleled user satisfaction.",
+    preview:
+      "Redefine your daily moments with the iPhone 12 series. This device features a Ceramic Shield front cover, A14 Bionic chip, and a dual-camera system for capturing every detail with precision.",
+  },
+  {
+    quantity: 0,
+    id: 18,
+    title: "iphone 7/7 Plus - 32/128/256GB",
+    image:
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162704/iphone7_kbvsx8.jpg",
+      price: "Call: 07033251356",
+      seller: "Perfect Computers",
+    description:
+      "Discover the timeless elegance and powerful performance of the Apple iPhone 7 series. Immerse yourself in a world of innovation and sophistication with the iPhone 7 and 7 Plus. These iconic devices blend style with substance, providing an exceptional user experience.",
+    preview:
+      "Sleek and stylish, the iPhone 7 series offers a 4.7-inch Retina display, A10 Fusion chip, and a 12MP camera. Experience seamless performance and impressive features in a compact design.",
+  },
+  {
+    quantity: 0,
+    id: 19,
+    title: "JBL Speakers",
+    image:
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162725/jbl-hero_b2aabx.webp",
+      price: "Call: 07033251356",
+      seller: "Perfect Computers",
+    preview:
+      "Elevate your audio experience with JBL Speakers, where cutting-edge technology meets superior sound quality. Explore a range of speakers designed to deliver immersive and crystal-clear audio for every occasion.",
+      description:
+      "Immerse yourself in the rich and powerful sound of JBL Speakers. From portable Bluetooth speakers for on-the-go music enthusiasts to premium home audio systems, JBL offers a diverse lineup to suit your lifestyle. Experience audio excellence with JBL, where innovation meets unparalleled performance.",
+  },
+  {
+    quantity: 0,
+    id: 20,
+    title: "Apple iWatches",
+    image:
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162745/iwatch_uikysi.png",
+      price: "Call: 07033251356",
+      seller: "Perfect Computers",
+    description:
+      "Elevate your daily routine with Apple iWatches, curated to complement your lifestyle. From fitness tracking to seamless integration with your iPhone, these smartwatches offer a comprehensive suite of features. Stay connected, stay active, and make a statement with the perfect fusion of innovation and elegance - Apple iWatches.",
+    preview:
+      "Discover the pinnacle of wearable technology with Apple iWatches. Seamlessly blending style and functionality, Apple iWatches redefine the way you experience time. Explore a collection that harmonizes cutting-edge features, precision engineering, and iconic design.",
   },
 ];
 
 const StoreComponent = () => {
   const { selectedItems, SetSelectedItems, books, setBooks,runme, setRunme,countCartItems, uniqueCount ,} =
     useContext(myGlobalContext);
-  // const sliceData = (data, start, end) => {
-  //   const newData11 = data.slice(start, end);
-  //   return newData11;
-  // };
-
 
   const loadData =useCallback( ()=>{
     setBooks(allBooks)
@@ -236,7 +283,7 @@ const StoreComponent = () => {
           title: items.title,
           image: items.image,
           price: items.price,
-          author: items.author,
+          seller: items.seller,
           quantity: items.quantity + 1,
         },
         ...selectedItems,
@@ -256,7 +303,7 @@ const StoreComponent = () => {
             title: items.title,
             image: items.image,
             price: items.price,
-            author: items.author,
+            seller: items.seller,
             quantity: items.quantity + 1,
           },
           ...selectedItems,
@@ -299,18 +346,18 @@ const StoreComponent = () => {
 
               <div className=" h-[380px] w-[90%]  ml-4  relative">
                 <p className="mb-4 text-left tracking-wider  uppercase text-[0.9rem] lg:text-[1rem] md:text-[0.8rem]">
-                  {truncateText(items.title, 69)}
+                  <b>{truncateText(items.title, 69)}</b>
                 </p>
                 <div>
                   <p className="my-4 text-zinc-700">
-                    {truncateText(items.description, 150)}
+                    {truncateText(items.description, 250)}
                   </p>
                 </div>
                 <div className="absolute bottom-0 w-full ">
                   <div className="pl-2 w-[90%] ">
-                    Author : {items.author}
+                    Seller : {items.seller}
                   </div>
-                  <div className="ml-2 my-2 bg-yellow-500 rounded flex justify-center w-[25%] h-[30px]">
+                  <div className="ml-2 my-2 bg-yellow-500 rounded flex justify-center w-[35%] h-[30px]">
                     {items.price}
                   </div>
                   <div className="w-full flex justify-end ">
