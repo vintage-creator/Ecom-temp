@@ -37,12 +37,12 @@ const CartComponent = () => {
             <p className="text-[#10181f] font-semibold">{roundNum(subTotal)}</p>
           </div>
           <div className="flex justify-between py-2 border-b-[1px] border-[#cad3df7b]">
-            <p className="text-[#10181f] font-semibold">Shipping</p>
-            <p className="text-[#10181f] font-semibold">10</p>
+            <p className="text-[#10181f] font-semibold">VAT</p>
+            <p className="text-[#10181f] font-semibold">₦650</p>
           </div>
           <div className="flex justify-between mt-4  mb-6">
             <p className="text-[#10181f] font-semibold text-2xl">TOTAL</p>
-            <p className="text-[#10181f] font-semibold text-2xl">{roundNum(subTotal + 10)}</p>
+            <p className="text-[#10181f] font-semibold text-2xl">{roundNum(`₦${subTotal}+650`)}</p>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const CartComponent = () => {
                 return (
                   <div className="p-4 flex justify-between " key={items.id}>
                     <div
-                      className="w-[30%]  bg-cover bg-center h-[100px] md:h-[100px] rounded-xl"
+                      className="w-[30%]  bg-cover bg-center h-[200px] md:h-[200px] rounded-xl"
                       style={{ backgroundImage: `url(${items.image})` }}
                     ></div>
                     <div className="flex flex-wrap w-[60%] ">
@@ -63,7 +63,6 @@ const CartComponent = () => {
                         <p className="text-sm font-semibold text-dark">
                           {items.title}
                         </p>
-                        <p className="text-gray-600">{items.author}</p>
                         <p>{items.price}</p>
                       </div>
                       <div className="w-[30%] flex items-center ">

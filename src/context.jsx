@@ -2,11 +2,8 @@ import React, { useCallback, useEffect, useState } from "react";
 const myGlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
-  // =========>>> ADMIN FUNCTIONS STARTS HERE
   const [page, setPage] = useState("");
   const [showdelete, setShowDelete] = useState("");
-  // =========>>> ADMIN FUNCTIONS ENDS HERE
-  // =========>>> STORE FUNCTIONS STARTS HERE
   const [countCartItems, setCountCartItems] = useState(0);
   const [selectedItems, SetSelectedItems] = useState([]);
   const [runme, setRunme] = useState(false);
@@ -18,9 +15,19 @@ const Provider = ({ children }) => {
   const [paymentOpen, setPaymentOpen] = useState(false);
 
   const roundNum = (num) => {
-    const newNum = num.toFixed(2);
-    return newNum;
+    const numAsString = String(num);
+    const numericValue = parseFloat(numAsString.replace(/[^0-9.-]+/g, ''));
+  
+    if (!isNaN(numericValue)) {
+      const newNum = numericValue.toFixed(2);
+      return newNum;
+    } else {
+      console.error('Invalid input for roundNum: ', num);
+      return num; 
+    }
   };
+  
+  
 
   const uniqueCount = (id) => {
     const newCount = selectedItems.find((x) => x.id === id);
