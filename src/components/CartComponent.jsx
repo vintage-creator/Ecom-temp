@@ -5,7 +5,6 @@ import { MdDeleteForever } from "react-icons/md";
 import myGlobalContext from "../context";
 
 const CartComponent = () => {
-
   const {
     selectedItems,
     roundNum,
@@ -14,15 +13,18 @@ const CartComponent = () => {
     subTotal,
     IncreaseUniqueCount,
     DecreaseUniqueCount,
-    deleteCartItem,checkoutHandler
+    deleteCartItem,
+    checkoutHandler,
   } = useContext(myGlobalContext);
-
+  // console.log("subTotal", subTotal);
+  // console.log("selectedItems", selectedItems);
   // const [quantityInput,setQuantityInput] = useState()
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 fixed top-2 left-2 right-2 bottom-2 z-30 "
-    style={{backgroundColor:"rgba(0,0,0,0.5)"}}
-    > 
+    <div
+      className="grid grid-cols-1 sm:grid-cols-2 fixed top-[120px] left-0 right-2 bottom-2 z-[99]"
+      style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+    >
       <div className="w-full bg-white  rounded">
         <div className="w-full p-4 flex justify-end cursor-pointer">
           <FiMinimize2
@@ -31,27 +33,56 @@ const CartComponent = () => {
             onClick={() => setCartOpen(false)}
           />
         </div>
-        <div className="p-4   rounded-lg bg-[#ffffff] border-b-2 border-[#10181f] px-20">
+
+        <div className="p-4 rounded-lg bg-[#ffffff] border-b-2 border-[#10181f] px-20">
           <div className="flex justify-between">
             <p className="text-[#10181f] font-semibold">Sub-Total</p>
-            <p className="text-[#10181f] font-semibold">{roundNum(subTotal)}</p>
+            <p className="text-[#10181f] font-semibold">
+              ₦{roundNum(subTotal.toLocaleString())}
+            </p>
           </div>
           <div className="flex justify-between py-2 border-b-[1px] border-[#cad3df7b]">
             <p className="text-[#10181f] font-semibold">VAT</p>
             <p className="text-[#10181f] font-semibold">₦650</p>
           </div>
-          <div className="flex justify-between mt-4  mb-6">
-            <p className="text-[#10181f] font-semibold text-2xl">TOTAL</p>
-            <p className="text-[#10181f] font-semibold text-2xl">{roundNum(`₦${subTotal}+650`)}</p>
+          <div className="flex justify-between mt-4  mb-6 gap-2">
+            <p className="text-[#10181f] font-semibold text-2xl">TOTAL:</p>
+            <p className="text-[#10181f] font-semibold text-2xl">
+              ₦{roundNum(subTotal + 650).toLocaleString()}
+            </p>
           </div>
         </div>
 
         <div className="p-4">
-          {totalQty === 0 ? <p className="font-semibold track-wider">Continue shopping, your shopping cart is empty.</p>:totalQty === 1 ?<p className="font-semibold track-wider">{totalQty} item in your shopping cart, still look around.</p>:totalQty === 2 ?<p className="font-semibold track-wider">{totalQty} items in your shopping cart, you still need to look around.</p>:<p className="font-semibold track-wider">{totalQty} items in your shopping cart.</p>}
+          {totalQty === 0 ? (
+            <p className="font-semibold track-wider">
+              Continue shopping, your shopping cart is empty.
+            </p>
+          ) : totalQty === 1 ? (
+            <p className="font-semibold track-wider">
+              {totalQty} item in your shopping cart, still look around.
+            </p>
+          ) : totalQty === 2 ? (
+            <p className="font-semibold track-wider">
+              {totalQty} items in your shopping cart, you still need to look
+              around.
+            </p>
+          ) : (
+            <p className="font-semibold track-wider">
+              {totalQty} items in your shopping cart.
+            </p>
+          )}
         </div>
+
         <div className=" overflow-y-scroll h-[250px]">
           {selectedItems.length > 0
             ? selectedItems.map((items) => {
+                console.log(
+                  "itemprice",
+                  items.price,
+                  "itemqty",
+                  items.quantity
+                );
                 return (
                   <div className="p-4 flex justify-between " key={items.id}>
                     <div
@@ -63,7 +94,7 @@ const CartComponent = () => {
                         <p className="text-sm font-semibold text-dark">
                           {items.title}
                         </p>
-                        <p>{items.price}</p>
+                        <p>₦{items.price.toLocaleString()}</p>
                       </div>
                       <div className="w-[30%] flex items-center ">
                         <div className="pl-2 border-[1px] rounded-xl border-gray-500 w-[90%]">
@@ -103,8 +134,9 @@ const CartComponent = () => {
         </div>
 
         <div className="w-full flex justify-center my-[3px]">
-          <div className="flex justify-center items-center bg-[#201f1f] text-white rounded-xl w-[40%] h-[50px] cursor-pointer"
-          onClick={checkoutHandler}
+          <div
+            className="flex justify-center items-center bg-[#201f1f] text-white rounded-xl w-[40%] h-[50px] cursor-pointer"
+            onClick={checkoutHandler}
           >
             <p className="tracking-wider font-semibold">Checkout</p>
           </div>
