@@ -16,8 +16,6 @@ const StoreComponent = () => {
     uniqueCount,
   } = useContext(myGlobalContext);
 
-  console.log("books", books);
-
   const loadData = useCallback(() => {
     setBooks(allBooks);
   }, [setBooks]);
@@ -88,9 +86,9 @@ const StoreComponent = () => {
                     : item.price}
                 </div>
                 <div className="flex mt-2">
-                  <div className="rounded-full h-6 w-6 bg-gray-200 flex justify-center items-center p-[5px] text-red-500">
-                  {console.log("Unique Count:", uniqueCount(item.id))}
-                    {item.quantity !== 0 && uniqueCount(item.id)}
+                  <div className="rounded-full h-6 w-6 bg-gray-200 flex justify-center items-center p-[5px] text-black">
+                    {/* {console.log("unique", item)} */}
+                    {uniqueCount(item.id)}
                   </div>
                   <button
                     className={`rounded-full bg-[#222222] text-white flex items-center px-4 py-1 font-semibold ${

@@ -29,13 +29,13 @@ const Store = () => {
   }, []);
 
   return (
-    <div className="mt-[242px] sm:mt-[50px] md:mt-[100px] lg:mt-[30px]">
+    <div className="mt-[238px]  md:mt-[180px] lg:mt-[100px]">
       <div
-        className="block lg:hidden w-full h-[300px] overflow-hidden bg-cover"
+        className="flex lg:hidden w-full h-[300px] overflow-hidden bg-cover"
         style={{
           backgroundImage: `url('${
             currentSlide === 0
-              ? "./myImages/lapsale.jpg"
+              ? "./myImages/lapt1.jpg"
               : "./myImages/pic3.png"
           }')`,
           backgroundPosition: "center",
@@ -44,13 +44,14 @@ const Store = () => {
       ></div>
 
       <div
-        className="hidden lg:block w-full h-[450px]  bg-contain mt-[100px]"
+        className="hidden lg:flex  h-[450px]  bg-cover mt-[100px]"
         style={{
           backgroundImage: `url('${
             currentSlide === 0 ? "./myImages/pic2.png" : "./myImages/pic3.png"
           }')`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+         
         }}
       ></div>
 

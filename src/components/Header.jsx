@@ -45,7 +45,7 @@ const Header = () => {
             page === "adminDashboard" ? "w-full" : "w-full fixed top-0 z-[999]"
           } `}
         >
-          <div className="border-b-[1px] border-gray-800 bg-[#222222] text-zinc-200 flex-col p-4 justify-between text-[12px] md:py-2 md:px-10 md:flex md:flex-row">
+          <div className="border-b-[1px] border-gray-800 bg-[#222222] text-zinc-200 flex-col p-4 justify-between text-[12px] lg:text-[16px] md:py-2 md:px-10 md:flex md:flex-row">
             <div></div>
             <div className="md:flex md:space-x-4">
               <p>
@@ -56,14 +56,15 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="py-4 px-4 md:px-10 md:py-4 bg-[#222222] lg:flex lg:items-center lg:justify-between ">
-            <div className="flex lg:gap-10 lg:items-center w-full lg:w-[50%] justify-between">
-              <div>
+          <div className="py-4 px-4 md:px-10 md:py-4 bg-[#222222] lg:flex lg:items-center lg:justify-between  ">
+            <div className="flex lg:gap-10 lg:items-center w-full lg:w-[70%] justify-between">
+              <div className="lg:flex lg:w-full lg:items-center lg:gap-4 lg:text-[24px] lg:font-bold">
                 <img
                   src="/myImages/Mask group (2).png"
                   alt="Logo"
                   className="h-10 w-10 lg:h-12 lg:w-12"
                 />
+                <p className="text-white hidden lg:flex">Perfect Computers</p>
               </div>
 
               {/* mobile */}
@@ -84,12 +85,12 @@ const Header = () => {
               </div>
 
               {/* big screen */}
-              <div class="mt-3  lg:flex rounded justify-center items-center  border border-white overflow-hidden hidden">
+              <div class="mt-3  lg:flex rounded justify-center items-center  border border-white overflow-hidden hidden lg:w-full">
                 <input
                   placeholder="Search computers"
                   value={search}
                   onChange={handleSearchInputChange}
-                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-zinc-500  md:w-[33vw]"
+                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-white  md:w-[100vw]"
                 />
               </div>
             </div>
@@ -101,7 +102,7 @@ const Header = () => {
                   placeholder="Search computers"
                   value={search}
                   onChange={handleSearchInputChange}
-                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-zinc-500  md:w-[33vw]"
+                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-white  md:w-[33vw]"
                 />
               </div>
 
