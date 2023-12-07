@@ -22,10 +22,11 @@ const CartComponent = () => {
 
   return (
     <div
-      className="grid grid-cols-1 sm:grid-cols-2 fixed top-[120px] left-0 right-2 bottom-2 z-[99]"
+      className="grid grid-cols-1 sm:grid-cols-2 fixed 
+      top-[230px] md:top-[180px] lg:top-[115px] left-0 right-0 bottom-0 z-[99]  "
       style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
     >
-      <div className="w-full bg-white  rounded">
+      <div className="w-full bg-white  rounded overflow-y-scroll">
         <div className="w-full p-4 flex justify-end cursor-pointer">
           <FiMinimize2
             size={24}
@@ -34,7 +35,7 @@ const CartComponent = () => {
           />
         </div>
 
-        <div className="p-4 rounded-lg bg-[#ffffff] border-b-2 border-[#10181f] px-20">
+        <div className="lg:p-4 rounded-lg bg-[#ffffff] border-b-2 border-[#10181f] px-4 lg:px-20 ">
           <div className="flex justify-between">
             <p className="text-[#10181f] font-semibold">Sub-Total</p>
             <p className="text-[#10181f] font-semibold">
@@ -46,8 +47,8 @@ const CartComponent = () => {
             <p className="text-[#10181f] font-semibold">₦650</p>
           </div>
           <div className="flex justify-between mt-4  mb-6 gap-2">
-            <p className="text-[#10181f] font-semibold text-2xl">TOTAL:</p>
-            <p className="text-[#10181f] font-semibold text-2xl">
+            <p className="text-[#10181f] text-lg font-semibold lg:text-2xl">TOTAL:</p>
+            <p className="text-[#10181f] text-lg font-semibold lg:text-2xl">
               ₦{roundNum(subTotal + 650).toLocaleString()}
             </p>
           </div>

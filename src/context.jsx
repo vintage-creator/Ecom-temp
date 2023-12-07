@@ -32,7 +32,7 @@ const Provider = ({ children }) => {
 
   const uniqueCount = (id) => {
     const newCount = selectedItems.find((x) => x.id === id);
-    return newCount ? newCount.quantity : 0;
+    return newCount && newCount.quantity;
   };
 
   const IncreaseUniqueCount = (items) => {
