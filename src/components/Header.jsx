@@ -45,7 +45,7 @@ const Header = () => {
             page === "adminDashboard" ? "w-full" : "w-full fixed top-0 z-[999]"
           } `}
         >
-          <div className="border-b-[1px] border-gray-800 bg-[#222222] text-zinc-200 flex-col p-4 justify-between text-[12px] md:py-2 md:px-10 md:flex md:flex-row">
+          <div className="border-b-[1px] border-gray-800 bg-[#222222] text-zinc-200 flex-col p-4 justify-between text-[12px] lg:text-[16px] md:py-2 md:px-10 md:flex md:flex-row">
             <div></div>
             <div className="md:flex md:space-x-4">
               <p>
@@ -90,7 +90,7 @@ const Header = () => {
                   placeholder="Search computers"
                   value={search}
                   onChange={handleSearchInputChange}
-                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-zinc-500  md:w-[100vw]"
+                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-white  md:w-[100vw]"
                 />
               </div>
             </div>
@@ -102,7 +102,7 @@ const Header = () => {
                   placeholder="Search computers"
                   value={search}
                   onChange={handleSearchInputChange}
-                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-zinc-500  md:w-[33vw]"
+                  class="py-[5px] rounded outline-none px-4 bg-[#222222] text-white  md:w-[33vw]"
                 />
               </div>
 
