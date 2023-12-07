@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { allBooks } from "./utils/data/data";
 const myGlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
@@ -14,26 +15,24 @@ const Provider = ({ children }) => {
   const [moreArticles, setMoreArticles] = useState(false);
   const [paymentOpen, setPaymentOpen] = useState(false);
 
+  const [search, setSearch] = useState("");
+
   const roundNum = (num) => {
-    const numAsString = String(num);
-    const numericValue = parseFloat(numAsString.replace(/[^0-9.-]+/g, ''));
-  
-    if (!isNaN(numericValue)) {
-      const newNum = numericValue.toFixed(2);
-      return newNum;
+    const numAsNumber =
+      typeof num === "string" ? parseFloat(num.replace(/[^0-9.-]+/g, "")) : num;
+
+    if (!isNaN(numAsNumber)) {
+      const roundedNumber = numAsNumber.toFixed(2);
+      return parseFloat(roundedNumber).toLocaleString(); // Use toLocaleString to add commas
     } else {
-      console.error('Invalid input for roundNum: ', num);
-      return num; 
+      console.error("Invalid input for roundNum: ", num);
+      return num;
     }
   };
-  
-  
 
   const uniqueCount = (id) => {
     const newCount = selectedItems.find((x) => x.id === id);
-    if (newCount) {
-      return newCount.quantity;
-    }
+    return newCount ? newCount.quantity : 0;
   };
 
   const IncreaseUniqueCount = (items) => {
@@ -83,6 +82,7 @@ const Provider = ({ children }) => {
 
     return setTotalQty(data);
   }, [selectedItems]);
+
   useEffect(() => {
     totalQtyFunction();
   }, [runme, totalQtyFunction]);
@@ -92,8 +92,10 @@ const Provider = ({ children }) => {
       .map((x) => x.price * x.quantity)
       .reduce((a, b) => a + b, 0);
 
+    console.log("subTotalFunction", data);
     return setSubTotal(data);
   }, [selectedItems]);
+
   useEffect(() => {
     subTotalFunction();
   }, [runme, subTotalFunction]);
@@ -108,10 +110,34 @@ const Provider = ({ children }) => {
     setCartOpen(false);
     setPaymentOpen(true);
   };
+
+  const handleSearchInputChange = (e) => {
+    const inputValue = e.target.value;
+    setSearch(inputValue);
+
+    // Trigger search immediately on input change
+    handleSearch(inputValue);
+  };
+
+  const handleSearch = (searchTerm) => {
+    // If the search term is empty, set the books back to the original data
+    if (searchTerm === "") {
+      setBooks([...allBooks]);
+      return;
+    }
+
+    // Filter books based on the title containing the search input
+    const searchResults = allBooks.filter((item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    // Update the state with the filtered items
+    setBooks([...searchResults]); // Creating a new array to update the state
+  };
   // =========>>> STORE FUNCTIONS ENDS HERE
 
   //=========>>> BLOG STARTS FUNCTIONS HERE
-  const [signupLoginPan,setSignupLoginPan]=useState(true)
+  const [signupLoginPan, setSignupLoginPan] = useState(true);
   const [componentName, setComponentName] = useState("");
 
   const [openAndClose2, setOpenAndClose2] = useState("hidden");
@@ -145,7 +171,7 @@ const Provider = ({ children }) => {
       date: `${date}`,
     });
   }, [postID]);
-//edit post
+  //edit post
   useEffect(() => {
     getPostData();
   }, [runme, getPostData]);
@@ -194,7 +220,9 @@ const Provider = ({ children }) => {
     detailPageID,
     setDetailPageID,
     formButton,
-    setFormButton,openAndClose2, setOpenAndClose2,
+    setFormButton,
+    openAndClose2,
+    setOpenAndClose2,
     // =========>>> BLOG VALUES ENDS HERE
 
     // =========>>> STORE VALUES STARTS HERE
@@ -223,7 +251,12 @@ const Provider = ({ children }) => {
     paymentOpen,
     setPaymentOpen,
     roundNum,
-    signupLoginPan,setSignupLoginPan,
+    signupLoginPan,
+    setSignupLoginPan,
+    setSearch,
+    search,
+    handleSearchInputChange,
+    handleSearch,
     // =========>>> STORE VALUES ENDS HERE
     // =========>>> ADMIN FUNCTIONS STARTS HERE
 
@@ -231,7 +264,9 @@ const Provider = ({ children }) => {
     componentName,
     setComponentName,
     page,
-    setPage,showdelete, setShowDelete
+    setPage,
+    showdelete,
+    setShowDelete,
   };
 
   return (

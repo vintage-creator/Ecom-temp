@@ -5,51 +5,66 @@ import PaymentModal from "../components/PaymentModal";
 import PaymentUserDetailsForm from "../components/PaymentUserDetailsForm";
 import ReactPlayer from "react-player";
 import myGlobalContext from "../context";
+
 const Store = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-const {cartOpen, paymentOpen, setPage} = useContext(myGlobalContext)
+  const { cartOpen, paymentOpen, setPage } = useContext(myGlobalContext);
 
+  const pageName = () => {
+    setPage("home");
+  };
 
-const pageName = ()=>{
-  setPage("home")
-}
+  useEffect(() => {
+    pageName();
+  }, []);
 
-useEffect(()=>{
-  pageName()
-})
+  useEffect(() => {
+    const totalSlides = 2; // Total number of slides
 
-useEffect(() => {
-  const totalSlides = 2; // Total number of slides
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+    }, 5000);
 
-  const interval = setInterval(() => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-  }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
-  return () => clearInterval(interval);
-}, []);
+  return (
+    <div className="mt-[242px] sm:mt-[50px] md:mt-[100px] lg:mt-[30px]">
+      <div
+        className="block lg:hidden w-full h-[300px] overflow-hidden bg-cover"
+        style={{
+          backgroundImage: `url('${
+            currentSlide === 0
+              ? "./myImages/lapsale.jpg"
+              : "./myImages/pic3.png"
+          }')`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
 
+      <div
+        className="hidden lg:block w-full h-[450px]  bg-contain mt-[100px]"
+        style={{
+          backgroundImage: `url('${
+            currentSlide === 0 ? "./myImages/pic2.png" : "./myImages/pic3.png"
+          }')`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
 
+      {paymentOpen && (
+        <PaymentModal>
+          <PaymentUserDetailsForm />
+        </PaymentModal>
+      )}
 
-return (
-  <div className="relative">
+      {cartOpen && <CartComponent />}
 
-    <div className="w-full h-[700px] md:h-[600px] relative overflow-hidden">
-      <div className="absolute inset-0 z-10">
-        {currentSlide === 0 ? (
-          <img src="./myImages/pic2.png" alt="Slide 2" className="w-full mt-[100px] md:mt-[120px] object-contain" />
-        ) : null}
-        {currentSlide === 1 ? (
-          <a href="mailto:mperfectcomputers@gmail.com"><img src="./myImages/pic3 (1).png" alt="Slide 3" className="w-full mt-[100px] md:mt-[120px] object-cover" /></a>
-        ) : null}
-      </div>
-
+      <StoreComponent />
     </div>
-
-    {paymentOpen && <PaymentModal><PaymentUserDetailsForm /></PaymentModal>}
-    {cartOpen && <CartComponent />}
-    <StoreComponent />
-  </div>
-);
+  );
 };
 
 export default Store;
