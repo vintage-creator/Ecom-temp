@@ -10,6 +10,8 @@ function PaymentUserDetailsForm() {
   const { spinner, roundNum, subTotal, setPaymentOpen } =
     useContext(myGlobalContext);
 
+  console.log("subTotal", subTotal);
+
   const [paymentData, setpaymentData] = useState({
     name: "",
     email: "",
@@ -23,7 +25,7 @@ function PaymentUserDetailsForm() {
       ...paymentData,
       [name]: value,
     });
-    console.log({ ...paymentData, [name]: value });
+    // console.log({ ...paymentData, [name]: value });
   };
 
   //   const newData = { id: uuidv4(), name, email, phone };
@@ -49,13 +51,13 @@ function PaymentUserDetailsForm() {
   };
 
   return (
-    <>
+    <div className="">
       <ToastContainer />
-      <div className=" bg-white rounded-md drop-shadow-xl p-2">
+      <div className=" bg-white rounded-md drop-shadow-xl p-2  mt-[200px] md:mt-[240px] lg:mt-[130px]">
         <div className="  w-[95vw] h-[60vh]  relative overflow-y-scroll p-4 sm:w-[60vw] md:w-[70vw] md:p-16 md:h-[80vh] ">
           {""}
 
-          <h2 className="text-zinc-900 font-bold text-xl">PAYMENT FORM</h2>
+          <h2 className="text-zinc-900 font-bold md:text-xl">PAYMENT FORM</h2>
 
           <div
             className=" rounded-full absolute right-4 top-4 cursor-pointer cursor-pointer"
@@ -66,7 +68,7 @@ function PaymentUserDetailsForm() {
 
           <div className="mt-4">
             <label
-              className="tracking-wider text-zinc-700"
+              className="tracking-wider text-zinc-700 text-[14px] md:text-[16px]"
               style={{ fontWeight: "bold" }}
             >
               FULL NAME
@@ -82,7 +84,7 @@ function PaymentUserDetailsForm() {
 
           <div className="mt-4">
             <label
-              className="tracking-wider text-zinc-700"
+              className="tracking-wider text-zinc-700 text-[14px] md:text-[16px]"
               style={{ fontWeight: "bold" }}
             >
               EMAIL ADDRESS
@@ -99,14 +101,14 @@ function PaymentUserDetailsForm() {
           <div className="mt-4">
             <div>
               <label
-                className="tracking-wider text-zinc-700"
+                className="tracking-wider text-zinc-700 text-[14px] md:text-[16px]"
                 style={{ fontWeight: "bold" }}
               >
                 PHONE NO
               </label>
             </div>
             <input
-              className=" bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-[50%] rounded outline-none"
+              className=" bg-white border-2 border-zinc-300 text-gray-700 pl-3 py-2 mt-2 w-full lg:w-[50%] rounded outline-none"
               type="text"
               name="phone"
               value={phone}
@@ -121,13 +123,13 @@ function PaymentUserDetailsForm() {
               <PaystackButton {...componentProps} />
             </div>
           ) : (
-            <div className="cursor-not-allowed bg-[#86efac] opacity-50 pl-3 py-2  w-[50%] rounded font-bold mt-8  text-zinc-900 text-center">
+            <div className="cursor-not-allowed bg-[#86efac] opacity-50 pl-3 py-2  lg:w-[50%] rounded font-bold mt-8  text-zinc-900 text-center">
               Pay Now
             </div>
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
