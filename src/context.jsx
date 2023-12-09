@@ -23,9 +23,9 @@ const Provider = ({ children }) => {
 
     if (!isNaN(numAsNumber)) {
       const roundedNumber = numAsNumber.toFixed(2);
-      return parseFloat(roundedNumber).toLocaleString(); // Use toLocaleString to add commas
+      return parseFloat(roundedNumber) // Use toLocaleString to add commas
     } else {
-      console.error("Invalid input for roundNum: ", num);
+      // console.error("Invalid input for roundNum: ", num);
       return num;
     }
   };

@@ -39,7 +39,7 @@ const CartComponent = () => {
           <div className="flex justify-between">
             <p className="text-[#10181f] font-semibold">Sub-Total</p>
             <p className="text-[#10181f] font-semibold">
-              ₦{roundNum(subTotal.toLocaleString())}
+              ₦{roundNum(subTotal).toLocaleString()}
             </p>
           </div>
           <div className="flex justify-between py-2 border-b-[1px] border-[#cad3df7b]">
