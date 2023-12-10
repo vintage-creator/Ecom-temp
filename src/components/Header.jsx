@@ -58,13 +58,13 @@ const Header = () => {
 
           <div className="py-4 px-4 md:px-10 md:py-4 bg-[#222222] lg:flex lg:items-center lg:justify-between  ">
             <div className="flex lg:gap-10 lg:items-center w-full lg:w-[70%] justify-between">
-              <div className="lg:flex lg:w-full lg:items-center lg:gap-4 lg:text-[24px] lg:font-bold">
+              <div className="lg:flex lg:w-full lg:items-center lg:gap-2 lg:text-[24px] lg:font-bold">
                 <img
                   src="/myImages/Mask group (2).png"
                   alt="Logo"
                   className="h-10 w-10 lg:h-12 lg:w-12"
                 />
-                <p className="text-white hidden lg:flex">Perfect Computers</p>
+                <p style={{ fontFamily: 'Nova Square' }} className="text-white hidden lg:flex">Perfect Computers</p>
               </div>
 
               {/* mobile */}

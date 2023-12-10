@@ -51,7 +51,7 @@ function PaymentUserDetailsForm() {
   };
 
   return (
-    <div className="">
+    <div className="bg-black">
       <ToastContainer />
       <div className=" bg-white rounded-md drop-shadow-xl p-2  mt-[200px] md:mt-[240px] lg:mt-[130px]">
         <div className="  w-[95vw] h-[60vh]  relative overflow-y-scroll p-4 sm:w-[60vw] md:w-[70vw] md:p-16 md:h-[80vh] ">

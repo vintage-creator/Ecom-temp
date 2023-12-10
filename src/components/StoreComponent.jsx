@@ -52,7 +52,7 @@ const StoreComponent = () => {
 
   return (
     <>
-      <p className="font-bold text-center py-4 text-[1.4rem] md:text-[1.5rem] lg:text-[2rem] leading-8">
+      <p style={{ fontFamily: 'Ubuntu' }} className="font-bold text-center py-4 text-[1.4rem] md:text-[1.5rem] md:mt-3 lg:text-[2rem] leading-8">
         Our Top-Selling Products
       </p>
       <div className="grid gap-2 p-2 grid-cols-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:p-4 lg:grid-cols-3 lg:gap-4 xl:grid-cols-4">

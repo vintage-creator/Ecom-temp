@@ -3,7 +3,6 @@ import StoreComponent from "../components/StoreComponent";
 import CartComponent from "../components/CartComponent";
 import Modal from "../components/Modal";
 import PaymentUserDetailsForm from "../components/PaymentUserDetailsForm";
-import ReactPlayer from "react-player";
 import myGlobalContext from "../context";
 
 const Store = () => {
@@ -23,7 +22,7 @@ const Store = () => {
 
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -40,24 +39,24 @@ const Store = () => {
     backgroundRepeat: "no-repeat",
   }}
 >
-  <div
+  {/* <div
     className="absolute inset-0 bg-black opacity-50"
     style={{ backdropFilter: "blur(8px)" }}
   ></div>
   <div className="flex flex-col px-5 justify-center items-center relative z-10">
     <h1 className="text-3xl text-center font-bold text-white">
-      <span className="text-red-600">Unbeatable Prices</span> You Can't
-      Find Anywhere
+      <span className="text-red-600 font-exo-2">Unbeatable </span> prices you can't
+      find anywhere
     </h1>
     <button className="bg-black w-[150px] text-white rounded-lg py-1 mt-5 font-bold hover:bg-red-600 duration-500">
       Contact Us
     </button>
-  </div>
+  </div> */}
 </div>
 
 
       <div
-        className="hidden md:flex relative h-[450px] bg-cover mt-[100px] justify-center items-center"
+        className="hidden md:flex relative h-[400px] bg-cover mt-[100px] justify-center items-center"
         style={{
           backgroundImage: `url('${
             currentSlide === 0 ? "./myImages/pc.jpg" : "./myImages/pc3.jpg"
@@ -68,15 +67,15 @@ const Store = () => {
       >
         <div
           className="absolute inset-0 bg-black opacity-50"
-          style={{ backdropFilter: "blur(2px)" }}
+          style={{ backdropFilter: "blur(8px)" }}
         ></div>
         <div className="flex flex-col px-5 justify-center items-center relative z-10">
-          <h1 className="text-5xl text-center font-bold flex flex-col gap-5 text-white">
-            <p className="text-red-600">Unbeatable Prices</p> You Can't Find
-            Anywhere
+          <h1 style={{ fontFamily: 'Ubuntu' }} className="text-5xl text-center font-bold flex flex-col gap-5 text-white">
+            <p><span className="text-red-800">Unbeatable</span> prices</p>you can't find
+            anywhere
           </h1>
-          <button className="bg-black w-[200px] text-white rounded-lg py-2 mt-10 font-bold text-[20px] hover:bg-red-600 duration-500">
-            Contact Us
+          <button className="bg-black w-[160px] text-white rounded-lg py-2 mt-10 font-bold text-[20px] hover:bg-red-800 duration-500">
+           <a href="mailto:mperfectcomputers@gmail.com">Contact Us</a>
           </button>
         </div>
       </div>
