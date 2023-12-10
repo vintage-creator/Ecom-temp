@@ -5,7 +5,7 @@ export const allBooks = [
     title: "The HP ZBOOK",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701129571/WhatsApp_Image_2023-11-22_at_08.57.05_33416a55_lf39a8.jpg",
-    price: 130000,
+    price: 330000,
     description:
       "The HP ZBOOK 15 G3 is a powerful laptop featuring an Intel Core i7 processor, 256GB storage, 8GB RAM, and a 4GB dedicated NVIDIA graphics card.",
   },
@@ -55,39 +55,9 @@ export const allBooks = [
     title: "Lenovo X230i",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701134852/WhatsApp_Image_2023-11-22_at_08.58.48_56d634ab_fcc0af.jpg",
-    price: "CALL +234 811 123 456",
+    price: "100000",
     description:
       "The Lenovo X230i is a reliable laptop equipped with an Intel Core i3 processor, 500GB storage, and 4GB of RAM.",
-  },
-  {
-    quantity: 0,
-    id: 7,
-    title: "Lenovo Thinkpad X250",
-    image:
-      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701147688/Lenovo_thinkpad_x250_q9apfr.jpg",
-    price: 130000,
-    description:
-      "The Lenovo ThinkPad X250 is a versatile laptop featuring an Intel Core i5 processor, 500GB storage, and 4GB of RAM.",
-  },
-  {
-    quantity: 0,
-    id: 8,
-    title: "HP Elitebook 840 G5",
-    image:
-      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701147966/WhatsApp_Image_2023-11-22_at_08.58.48_9cd9741f_esarek.jpg",
-    price: "CALL +234 811 123 456",
-    description:
-      "The HP EliteBook 840 G5, 7th Gen, is a powerful laptop with an Intel Core i5 processor, 256GB storage, and 8GB of RAM.",
-  },
-  {
-    quantity: 0,
-    id: 9,
-    title: "HP Elitebook 840 G4",
-    image:
-      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701148252/WhatsApp_Image_2023-11-22_at_08.58.49_d2558902_f2y8tp.jpg",
-    price: 190000,
-    description:
-      "The HP EliteBook 840 G4, 7th Gen, is a sophisticated laptop featuring an Intel Core i5 processor, 256GB storage, and 8GB of RAM.",
   },
   {
     quantity: 0,
@@ -105,7 +75,7 @@ export const allBooks = [
     title: "PS5 Consoles",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162440/WhatsApp_Image_2023-11-28_at_05.45.02_be116cd3_doeuge.jpg",
-    price: 320000,
+    price: "CALL +234 811 123 456",
     description:
       "Sony Playstation 5 Standard Edition Console - Unleash the power of next-gen gaming with cutting-edge graphics and lightning-fast performance.",
   },
@@ -115,9 +85,39 @@ export const allBooks = [
     title: "iPhone 14 Pro 128GB/256GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162454/WhatsApp_Image_2023-11-27_at_20.45.28_fb9bbb09_ryyq3a.jpg",
-    price: 125650,
+    price: "CALL +234 811 123 456",
     description:
       "Experience the epitome of smartphone excellence with expanded storage for all your needs. Enjoy advanced camera capabilities, a stunning display, and the seamless performance of iOS.",
+  },
+    {
+    quantity: 0,
+    id: 7,
+    title: "Lenovo Thinkpad X250",
+    image:
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701147688/Lenovo_thinkpad_x250_q9apfr.jpg",
+    price: 130000,
+    description:
+      "The Lenovo ThinkPad X250 is a versatile laptop featuring an Intel Core i5 processor, 500GB storage, and 4GB of RAM.",
+  },
+  {
+    quantity: 0,
+    id: 8,
+    title: "HP Elitebook 840 G5",
+    image:
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701147966/WhatsApp_Image_2023-11-22_at_08.58.48_9cd9741f_esarek.jpg",
+    price: "210000",
+    description:
+      "The HP EliteBook 840 G5, 7th Gen, is a powerful laptop with an Intel Core i5 processor, 256GB storage, and 8GB of RAM.",
+  },
+  {
+    quantity: 0,
+    id: 9,
+    title: "HP Elitebook 840 G4",
+    image:
+      "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701148252/WhatsApp_Image_2023-11-22_at_08.58.49_d2558902_f2y8tp.jpg",
+    price: 190000,
+    description:
+      "The HP EliteBook 840 G4, 7th Gen, is a sophisticated laptop featuring an Intel Core i5 processor, 256GB storage, and 8GB of RAM.",
   },
   {
     quantity: 0,
@@ -145,7 +145,7 @@ export const allBooks = [
     title: "Apple iphone 8/8+ - 64/256GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162641/8plus_and_8_glass_back_big.jpg.large_dxvoxq.jpg",
-    price: 675500,
+    price: "CALL +234 811 123 456",
     description:
       "The 64GB and 256GB variants offer ample storage for your essentials, delivering a smooth and responsive user experience for everyday tasks and multimedia enjoyment.",
   },
