@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import {
   TfiTwitter,
   TfiFacebook,
-  TfiPinterest,
   TfiInstagram,
   TfiYoutube,
 } from "react-icons/tfi";
@@ -38,11 +37,8 @@ const Footer = () => {
                       <div className="bg-zinc-700 rounded-full min-w-[30px] min-h-[30px] flex justify-center items-center">
                         <TfiFacebook size={19} className="text-gray-400" />
                       </div>
-                      <div className="bg-zinc-700 rounded-full min-w-[30px] min-h-[30px] flex justify-center items-center">
-                        <TfiPinterest size={19} className="text-gray-400" />
-                      </div>
                       <Link to="https://instagram.com/perfectcomputer_?igshid=MmVlMjlkMTBhMg%3D%3D&utm_source=qr" target="_blank">
-                        <div className="bg-zinc-700 rounded-full min-w-[30px] min-h-[30px] flex justify-center items-center">
+                        <div className="bg-red-700 rounded-full min-w-[30px] min-h-[30px] flex justify-center items-center">
                           <TfiInstagram size={19} className="text-gray-400" />
                         </div>
                       </Link>
