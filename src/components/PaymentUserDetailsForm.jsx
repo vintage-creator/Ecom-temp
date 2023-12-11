@@ -41,7 +41,7 @@ function PaymentUserDetailsForm() {
       phone,
     },
 
-    publicKey: "pk_test_0db18d70797d708b31c0f66b375c03250924409f",
+    publicKey: "pk_test_d3d37ad472a32cf61d097d911752d769594b83c1",
 
     text: "Pay Now",
 
