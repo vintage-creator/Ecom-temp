@@ -96,7 +96,7 @@ const Footer = () => {
 
               <div className="md:flex md:items-center md:mt-14 md:justify-start">
                 <p className="text-zinc-500 my-8">
-                  Perfect Computer Technologies. © Copyright 2023, All rights
+                  Perfect Computers. © Copyright 2023, All rights
                   reserved.
                 </p>
               </div>
