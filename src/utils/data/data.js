@@ -65,7 +65,7 @@ export const allBooks = [
     title: "The HP 15",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162415/WhatsApp_Image_2023-11-28_at_05.45.50_dcaf8379_qdmtei.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "HP 15 Touchscreen Laptop with Intel Core i5, 10th Gen, 12GB RAM, and 1TB HDD.",
   },
@@ -75,7 +75,7 @@ export const allBooks = [
     title: "PS5 Consoles",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162440/WhatsApp_Image_2023-11-28_at_05.45.02_be116cd3_doeuge.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Sony Playstation 5 Standard Edition Console - Unleash the power of next-gen gaming with cutting-edge graphics and lightning-fast performance.",
   },
@@ -85,7 +85,7 @@ export const allBooks = [
     title: "iPhone 14 Pro 128GB/256GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162454/WhatsApp_Image_2023-11-27_at_20.45.28_fb9bbb09_ryyq3a.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Experience the epitome of smartphone excellence with expanded storage for all your needs. Enjoy advanced camera capabilities, a stunning display, and the seamless performance of iOS.",
   },
@@ -125,7 +125,7 @@ export const allBooks = [
     title: "iPhone 13 Pro Max 128GB/256GB/512GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162477/WhatsApp_Image_2023-11-27_at_20.45.17_6cc24f29_mphchf.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Take your smartphone experience to the next level with increased storage capacity. Store more media, apps, and files without compromising on performance.",
   },
@@ -135,7 +135,7 @@ export const allBooks = [
     title: "iPhone 11 64GB/128GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162616/WhatsApp_Image_2023-11-27_at_20.45.08_f7ae73d0_ulcr0n.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Elevate your mobile experience with ample storage for apps, photos, and more. Capture memories and stay connected with the power of Apple's renowned technology.",
   },
@@ -145,7 +145,7 @@ export const allBooks = [
     title: "Apple iphone 8/8+ - 64/256GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162641/8plus_and_8_glass_back_big.jpg.large_dxvoxq.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "The 64GB and 256GB variants offer ample storage for your essentials, delivering a smooth and responsive user experience for everyday tasks and multimedia enjoyment.",
   },
@@ -155,7 +155,7 @@ export const allBooks = [
     title: "iphone X/XS/XR/XS Max - 64/128/256/512GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162668/iphone-x_tbbxsy.png",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Enjoy the Liquid Retina display, powerful A12 Bionic chip, and a single-lens camera that captures stunning portraits and immersive AR experiences.",
   },
@@ -165,7 +165,7 @@ export const allBooks = [
     title: "iphone 12/12 Pro/12 Pro Max - 64/128/256/512GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162688/IPhone12-64gb-ss_n6jaky.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "This device features a Ceramic Shield front cover, A14 Bionic chip, and a dual-camera system for capturing every detail with precision.",
   },
@@ -175,7 +175,7 @@ export const allBooks = [
     title: "iphone 7/7 Plus - 32/128/256GB",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162704/iphone7_kbvsx8.jpg",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Sleek and stylish, the iPhone 7 series offers a 4.7-inch Retina display, A10 Fusion chip, and a 12MP camera.",
   },
@@ -185,7 +185,7 @@ export const allBooks = [
     title: "JBL Speakers",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162725/jbl-hero_b2aabx.webp",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Elevate your audio experience with JBL Speakers, where cutting-edge technology meets superior sound quality.",
   },
@@ -195,7 +195,7 @@ export const allBooks = [
     title: "Apple iWatches",
     image:
       "https://res.cloudinary.com/dcoxo8snb/image/upload/v1701162745/iwatch_uikysi.png",
-    price: "CALL +234 811 123 456",
+    price: "CALL 07033251356",
     description:
       "Apple iWatches redefine the way you experience time. Explore a collection that harmonizes cutting-edge features, precision engineering, and iconic design.",
   },
